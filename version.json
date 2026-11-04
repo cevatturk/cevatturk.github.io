@@ -1,6 +1,6 @@
 {
-  "versionCode": 23,
-  "versionName": "1.2.8",
+  "versionCode": 24,
+  "versionName": "1.2.9",
   "storeUrl": "https://play.google.com/store/apps/details?id=com.cgstudiohome.marinext2100",
-  "notes": "v1.2.8 Güncellemesi: 9 Dilde Eksiksiz Gizlilik Politikası ve İlk Açılış Onayı + Google UMP & Reklam Tercihleri Doğrulaması + Canlı Web Gizlilik ve app-ads.txt Sayfaları Entegrasyonu"
+  "notes": "v1.2.9 Güncellemesi: Herkese Açık Canlı Güncelleme Denetimi (Public Raw Endpoint) + Otomatik Mağaza Güncelleme Bildirimi"
 }
