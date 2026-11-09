@@ -1,11 +1,11 @@
 {
-  "versionCode": 26,
-  "versionName": "1.3.1",
+  "versionCode": 28,
+  "versionName": "1.3.3",
   "channels": {
     "production": 25,
-    "alpha": 26,
+    "alpha": 28,
     "internal": 28
   },
   "storeUrl": "https://play.google.com/store/apps/details?id=com.cgstudiohome.marinext2100",
-  "notes": "v1.3.3 Dahili Test Dağıtımı: Telefon ekranlarına tam uyumlu 2 sütunlu Ayarlar menüsü, alt sabit butonlu kompakt Dil Seçimi menüsü, 1. Bölüm Konuşma Balonları, Zenginleştirilmiş Başlangıç Kılavuzu ve 9 Dilde Sürüm Yenilikleri."
+  "notes": "v1.3.3 Dahili ve Kapalı Test Dağıtımı: Telefon ekranlarına tam uyumlu 2 sütunlu Ayarlar menüsü, alt sabit butonlu kompakt Dil Seçimi menüsü, 1. Bölüm Konuşma Balonları, Zenginleştirilmiş Başlangıç Kılavuzu ve 9 Dilde Sürüm Yenilikleri."
 }
