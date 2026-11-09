@@ -1,11 +1,11 @@
 {
-  "versionCode": 28,
-  "versionName": "1.3.3",
+  "versionCode": 29,
+  "versionName": "1.3.4",
   "channels": {
     "production": 25,
-    "alpha": 28,
-    "internal": 28
+    "alpha": 29,
+    "internal": 29
   },
   "storeUrl": "https://play.google.com/store/apps/details?id=com.cgstudiohome.marinext2100",
-  "notes": "v1.3.3 Dahili ve Kapalı Test Dağıtımı: Telefon ekranlarına tam uyumlu 2 sütunlu Ayarlar menüsü, alt sabit butonlu kompakt Dil Seçimi menüsü, 1. Bölüm Konuşma Balonları, Zenginleştirilmiş Başlangıç Kılavuzu ve 9 Dilde Sürüm Yenilikleri."
+  "notes": "v1.3.4 AdMob Akıllı Test ve Güvenlik Güncellemesi: Dahili ve Kapalı Test kanallarında %100 garantili resmi Google test reklamları, gizli testçi menüsü doğrudan reklam testi butonu ve kesintisiz ödüllü akış."
 }
