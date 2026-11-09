@@ -4,8 +4,8 @@
   "channels": {
     "production": 25,
     "alpha": 26,
-    "internal": 27
+    "internal": 28
   },
   "storeUrl": "https://play.google.com/store/apps/details?id=com.cgstudiohome.marinext2100",
-  "notes": "v1.3.2 Dahili Test Dağıtımı: 1. Bölüm Konuşma Balonları, Zenginleştirilmiş Başlangıç Kılavuzu, Güvenli Sıfırlama Kalkanı, Kolay Oyun İçi Puanlama ve 9 Dilde Sürüm Yenilikleri Penceresi."
+  "notes": "v1.3.3 Dahili Test Dağıtımı: Telefon ekranlarına tam uyumlu 2 sütunlu Ayarlar menüsü, alt sabit butonlu kompakt Dil Seçimi menüsü, 1. Bölüm Konuşma Balonları, Zenginleştirilmiş Başlangıç Kılavuzu ve 9 Dilde Sürüm Yenilikleri."
 }
