@@ -4,8 +4,8 @@
   "channels": {
     "production": 25,
     "alpha": 29,
-    "internal": 29
+    "internal": 30
   },
   "storeUrl": "https://play.google.com/store/apps/details?id=com.cgstudiohome.marinext2100",
-  "notes": "v1.3.4 AdMob Akıllı Test ve Güvenlik Güncellemesi: Dahili ve Kapalı Test kanallarında %100 garantili resmi Google test reklamları, gizli testçi menüsü doğrudan reklam testi butonu ve kesintisiz ödüllü akış."
+  "notes": "v1.3.5 Güvenli Canlanma & Çoklu Dil Uyumu: Reklam izleme sonrası 5 saniye kalkan korumalı güvenli doğma, bölüm başı çift canlanma hakkı, sahada parlayan gerçek mavi kristaller ve %100 kusursuz 9 dil desteği."
 }
