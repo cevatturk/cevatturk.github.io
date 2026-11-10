@@ -1,14 +1,16 @@
 {
   "versionCode": 31,
-  "versionName": "1.3.6",
+  "versionName": "1.3.7",
   "channels": {
     "production": 25,
     "alpha": 31,
-    "internal": 31
+    "internal": 32
   },
   "storeUrl": "https://play.google.com/store/apps/details?id=com.cgstudiohome.marinext2100",
-  "notes": "v1.3.6 Dinamik Tam Ekran Görünümü & Ferah Menüler & Akıllı Analitik: Ultra geniş telefon ve tabletlerde sıfır siyah şerit, otomatik ekran boyutlandırma, genişletilmiş ferah profil & ayarlar & dil menüleri ve Firebase uyumlu akıllı yaşam boyu analitik motoru.",
+  "notes": "v1.3.7 9 Dilde Tam Uyumlu Güncelleme Bildirimi & Google Analytics 4 Ölçüm Entegrasyonu: Yeni sürüm uyarıları ve sürüm notları bağlantısı tüm dillerde kusursuz açılır, oyun istatistikleri doğrudan GA4 paneline bağlanır.",
   "remoteConfig": {
+    "ga4MeasurementId": "G-3EVKLV8SM8",
+    "ga4ApiSecret": "NpIfsFNeROWOFrpLWGiqMg",
     "interstitialEveryNLevels": 3,
     "minSecondsBetweenInterstitials": 180,
     "skipInterstitialAfterRewardedSeconds": 120,
