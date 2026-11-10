@@ -4,8 +4,15 @@
   "channels": {
     "production": 25,
     "alpha": 30,
-    "internal": 30
+    "internal": 31
   },
   "storeUrl": "https://play.google.com/store/apps/details?id=com.cgstudiohome.marinext2100",
-  "notes": "v1.3.5 Güvenli Canlanma & Çoklu Dil Uyumu: Reklam izleme sonrası 5 saniye kalkan korumalı güvenli doğma, bölüm başı çift canlanma hakkı, sahada parlayan gerçek mavi kristaller ve %100 kusursuz 9 dil desteği."
+  "notes": "v1.3.6 Dinamik Tam Ekran Görünümü & Ferah Menüler & Akıllı Analitik: Ultra geniş telefon ve tabletlerde sıfır siyah şerit, otomatik ekran boyutlandırma, genişletilmiş ferah profil & ayarlar & dil menüleri ve Firebase uyumlu akıllı yaşam boyu analitik motoru.",
+  "remoteConfig": {
+    "interstitialEveryNLevels": 3,
+    "minSecondsBetweenInterstitials": 180,
+    "skipInterstitialAfterRewardedSeconds": 120,
+    "doubleCrystalsEvent": false,
+    "bannerAnnouncement": ""
+  }
 }
