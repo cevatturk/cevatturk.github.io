@@ -4,10 +4,10 @@
   "channels": {
     "production": 25,
     "alpha": 32,
-    "internal": 32
+    "internal": 33
   },
   "storeUrl": "https://play.google.com/store/apps/details?id=com.cgstudiohome.marinext2100",
-  "notes": "v1.3.7 9 Dilde Tam Uyumlu Güncelleme Bildirimi & Google Analytics 4 Ölçüm Entegrasyonu: Yeni sürüm uyarıları ve sürüm notları bağlantısı tüm dillerde kusursuz açılır, oyun istatistikleri doğrudan GA4 paneline bağlanır.",
+  "notes": "v1.3.8 Kusursuz Canlanma Motoru & Android 13+ Tablet Tam Ekran Mimarisi: Ödüllü video erken kapansa dahi oyun asla kilitlenmez, büyük ekran ve tabletlerde görev çubuğu ve çoklu görev geçişleri %100 tam ekran kararlılığında çalışır.",
   "remoteConfig": {
     "ga4MeasurementId": "G-3EVKLV8SM8",
     "ga4ApiSecret": "NpIfsFNeROWOFrpLWGiqMg",
