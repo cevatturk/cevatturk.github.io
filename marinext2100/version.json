@@ -1,9 +1,9 @@
 {
-  "versionCode": 30,
-  "versionName": "1.3.5",
+  "versionCode": 31,
+  "versionName": "1.3.6",
   "channels": {
     "production": 25,
-    "alpha": 30,
+    "alpha": 31,
     "internal": 31
   },
   "storeUrl": "https://play.google.com/store/apps/details?id=com.cgstudiohome.marinext2100",
