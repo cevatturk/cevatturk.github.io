@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CG Studio Home & Labs — Aile yapımı bağımsız oyunlar ve yeni nesil mobil/web projeleri geliştirici portalı.">
+    <meta id="meta-description" name="description" content="CG Studio Home & Labs — Aile yapımı bağımsız oyunlar ve yeni nesil mobil/web projeleri geliştirici portalı.">
     <meta name="theme-color" content="#060814">
-    <title>CG Studio Home &amp; Labs | Aile Yapımı Oyunlar &amp; Teknoloji Portalı</title>
+    <title id="page-title" data-i18n="pageTitle">CG Studio Home &amp; Labs | Aile Yapımı Oyunlar &amp; Teknoloji Portalı</title>
     <link rel="icon" type="image/png" href="assets/icon-192.png">
     <link rel="apple-touch-icon" href="assets/icon-192.png">
     <style>
@@ -1161,8 +1161,8 @@
                 <a href="https://cevatturk.github.io/privacy-policy.html" data-i18n="navPrivacy">Gizlilik Politikası</a>
                 <a href="app-ads.txt" target="_blank">app-ads.txt</a>
                 <div class="lang-switch">
-                    <button id="lang-tr" class="lang-btn active" onclick="switchLang('tr')">TR</button>
-                    <button id="lang-en" class="lang-btn" onclick="switchLang('en')">EN</button>
+                    <button id="lang-tr" class="lang-btn active" onclick="switchLang('tr', true)">TR</button>
+                    <button id="lang-en" class="lang-btn" onclick="switchLang('en', true)">EN</button>
                 </div>
             </div>
         </div>
@@ -1173,45 +1173,45 @@
         <div class="hero-card">
             <div>
                 <span class="hero-badge" data-i18n="heroBadge">🔥 RESMİ GOOGLE PLAY LANSMANI • 10 YAŞINDAKİ OĞLUMUZUN HAYALİYLE BAŞLADI</span>
-                <h1 class="hero-title"><span>Marinext 2100</span> — Siber Gelecek &amp; Tarihi Kahramanlar</h1>
+                <h1 class="hero-title" data-i18n="heroTitle"><span>Marinext 2100</span> — Siber Gelecek &amp; Tarihi Kahramanlar</h1>
                 <p class="hero-desc" data-i18n="heroDesc">
                     10 yaşındaki oğlumuz Yavuz Selim'in hayal ettiği, tüm ailemizin birlikte test ettiği ve Google Play tarafından onaylanan 2D Retro Platform Macerası! Fatih Sultan Mehmet, Yavuz Sultan Selim, Kanuni Sultan Süleyman ve siber savaşçılarla 100 siber zindan, 50 trol etabı ve 120 FPS ultra akıcı motor.
                 </p>
 
                 <div class="hero-pills">
-                    <span class="stat-pill">⚔️ 100 Kampanya + 50 Trol Bölümü</span>
-                    <span class="stat-pill">👑 14 Karakter &amp; Özel Yetenek</span>
-                    <span class="stat-pill">⚡ 120 FPS Ultra Akıcı Motor</span>
-                    <span class="stat-pill">🌍 9 Dilde Tam Yerelleştirme</span>
+                    <span class="stat-pill" data-i18n="pillStages">⚔️ 100 Kampanya + 50 Trol Bölümü</span>
+                    <span class="stat-pill" data-i18n="pillHeroes">👑 14 Karakter &amp; Özel Yetenek</span>
+                    <span class="stat-pill" data-i18n="pillFps">⚡ 120 FPS Ultra Akıcı Motor</span>
+                    <span class="stat-pill" data-i18n="pillLangs">🌍 9 Dilde Tam Yerelleştirme</span>
                 </div>
 
                 <div class="cta-group">
                     <button class="btn btn-primary" onclick="openGameModal()">
-                        🎮 <span data-i18n="btnPlayInline">Sayfa İçinde Hemen Oyna</span>
+                        <span data-i18n="btnPlayInline">🎮 Sayfa İçinde Hemen Oyna</span>
                     </button>
                     <a href="https://cevatturk.github.io/2100-Mario/" target="_blank" class="btn btn-gold">
-                        🚀 <span data-i18n="btnPlayFull">Tam Ekran Web'de Aç</span>
+                        <span data-i18n="btnPlayFull">🚀 Tam Ekran Web'de Aç</span>
                     </a>
                     <a href="#family" class="btn btn-purple">
-                        👨‍👩‍👧‍👦 <span data-i18n="btnFamilyStory">Aile Hikayemiz &amp; Ekip</span>
+                        <span data-i18n="btnFamilyStory">👨‍👩‍👧‍👦 Aile Hikayemiz &amp; Ekip</span>
                     </a>
                     <button class="btn btn-outline" onclick="openAlbum('marinext')">
-                        🖼️ <span data-i18n="btnAlbum">Resim Galerisi &amp; Albüm</span>
+                        <span data-i18n="btnAlbum">🖼️ Resim Galerisi &amp; Albüm</span>
                     </button>
                     <button class="btn btn-crimson" onclick="openVideoModal('marinext')">
-                        🎬 <span data-i18n="btnVideo">Video &amp; Fragman İzle</span>
+                        <span data-i18n="btnVideo">🎬 Video &amp; Fragman İzle</span>
                     </button>
                 </div>
             </div>
 
             <div class="hero-visual">
-                <div class="hero-visual-wrapper" onclick="openAlbum('marinext')" title="Ekran görüntülerini ve albümü incelemek için tıklayın">
+                <div class="hero-visual-wrapper" onclick="openAlbum('marinext')" id="hero-visual-wrap" title="Ekran görüntülerini ve albümü incelemek için tıklayın">
                     <img id="hero-promo-img" src="assets/promo/marinext-promo-tr.png" alt="Marinext 2100 Promo Banner" onerror="this.src='assets/feature-graphic-1024x500.jpg'">
                     <div class="hero-visual-badge">
-                        🔍 <span>Albümü İncele</span>
+                        🔍 <span data-i18n="heroInspectBadge">Albümü İncele</span>
                     </div>
                 </div>
-                <small style="color: var(--text-muted); font-size: 12.5px;">Paket Kimliği: <code>com.cgstudiohome.marinext2100</code> • Google Play Store Onaylı • Android 7.0 - 16 (API 36)</small>
+                <small id="hero-package-info" style="color: var(--text-muted); font-size: 12.5px;" data-i18n="heroPackageInfo">Paket Kimliği: <code>com.cgstudiohome.marinext2100</code> • Google Play Store Onaylı • Android 7.0 - 16 (API 36)</small>
             </div>
         </div>
     </section>
@@ -1219,25 +1219,25 @@
     <!-- Studio Metrics Strip -->
     <div class="stats-strip">
         <div class="stat-card">
-            <span class="stat-num">4 Kişilik</span>
-            <span class="stat-label" data-i18n="statTeam">Tutkulu Aile Geliştirici Ekibi</span>
+            <span class="stat-num" data-i18n="statTeamNum">4 Kişilik</span>
+            <span class="stat-label" data-i18n="statTeamLabel">Tutkulu Aile Geliştirici Ekibi</span>
         </div>
         <div class="stat-card">
-            <span class="stat-num">150</span>
-            <span class="stat-label" data-i18n="statLevels">Özel Tasarım Bölüm (Marinext 2100)</span>
+            <span class="stat-num" data-i18n="statLevelsNum">150</span>
+            <span class="stat-label" data-i18n="statLevelsLabel">Özel Tasarım Bölüm (Marinext 2100)</span>
         </div>
         <div class="stat-card">
-            <span class="stat-num">120 FPS</span>
-            <span class="stat-label" data-i18n="statFps">Ultra Akıcı Oyun Motoru</span>
+            <span class="stat-num" data-i18n="statFpsNum">120 FPS</span>
+            <span class="stat-label" data-i18n="statFpsLabel">Ultra Akıcı Oyun Motoru</span>
         </div>
         <div class="stat-card">
-            <span class="stat-num">9 Dil</span>
-            <span class="stat-label" data-i18n="statLangs">Global Otomatik Dil Desteği</span>
+            <span class="stat-num" data-i18n="statLangsNum">9 Dil</span>
+            <span class="stat-label" data-i18n="statLangsLabel">Global Otomatik Dil Desteği</span>
         </div>
     </div>
 
     <!-- ==============================================================
-         NEW PROMINENT SECTION: AİLE HİKAYEMİZ & CG STUDIO HOME / LABS
+         FAMILY STORY & TEAM SECTION: CG Studio Home / Labs
          ============================================================== -->
     <section id="family" class="family-section">
         <div class="family-card-main">
@@ -1254,10 +1254,10 @@
             <div class="family-grid">
                 <!-- Sol Panel: Gerçek Aile & Çocuk Test Fotoğrafları Galerisi -->
                 <div class="family-photo-box">
-                    <div class="family-main-img-wrap" onclick="openAlbum('marinext', 1)" title="Büyütmek ve tüm test fotoğraflarını görmek için tıklayın">
+                    <div class="family-main-img-wrap" onclick="openAlbum('marinext', 1)" id="family-main-img-wrap" title="Büyütmek ve tüm test fotoğraflarını görmek için tıklayın">
                         <img id="family-featured-photo" src="assets/family/family-kids-couch-3.jpg" alt="Yavuz Selim ve İsranur Oyunu Test Ederken">
                         <div class="family-photo-tag">
-                            📸 <span>Yavuz Selim &amp; İsranur Cihaz Başında Testte</span>
+                            📸 <span data-i18n="famPhotoTag">Yavuz Selim &amp; İsranur Cihaz Başında Testte</span>
                         </div>
                     </div>
                     <div class="family-thumbs-row">
@@ -1283,7 +1283,7 @@
                         <div class="member-header">
                             <div class="member-icon">💻</div>
                             <div>
-                                <div class="member-name">Cevat</div>
+                                <div class="member-name" data-i18n="nameCevat">Cevat</div>
                                 <div class="member-role" data-i18n="roleCevat">Teknik Lider &amp; Operasyon</div>
                             </div>
                         </div>
@@ -1297,7 +1297,7 @@
                         <div class="member-header">
                             <div class="member-icon">🛡️</div>
                             <div>
-                                <div class="member-name">Gönül</div>
+                                <div class="member-name" data-i18n="nameGonul">Gönül</div>
                                 <div class="member-role" data-i18n="roleGonul">Kalite Kontrol &amp; QA</div>
                             </div>
                         </div>
@@ -1311,7 +1311,7 @@
                         <div class="member-header">
                             <div class="member-icon">🎮</div>
                             <div>
-                                <div class="member-name">Yavuz Selim (10 Yaş)</div>
+                                <div class="member-name" data-i18n="nameYavuz">Yavuz Selim (10 Yaş)</div>
                                 <div class="member-role" data-i18n="roleYavuz">Baş Oyun Tasarımcısı</div>
                             </div>
                         </div>
@@ -1325,7 +1325,7 @@
                         <div class="member-header">
                             <div class="member-icon">⭐</div>
                             <div>
-                                <div class="member-name">İsranur (6 Yaş)</div>
+                                <div class="member-name" data-i18n="nameIsranur">İsranur (6 Yaş)</div>
                                 <div class="member-role" data-i18n="roleIsranur">Junior Testçi &amp; Deneyim</div>
                             </div>
                         </div>
@@ -1337,7 +1337,7 @@
             </div>
 
             <!-- Tıklanabilir Tam Boyut Aile İnfografiği -->
-            <div class="family-infographic-wrap" onclick="openAlbum('marinext', 2)" title="Aile İnfografiğini Tam Boyutta İncelemek İçin Tıklayın">
+            <div class="family-infographic-wrap" onclick="openAlbum('marinext', 2)" id="family-infographic-wrap" title="Aile İnfografiğini Tam Boyutta İncelemek İçin Tıklayın">
                 <img id="family-team-infographic" src="assets/family/family-team-tr.png" alt="CG Studio Home Aile Ekibi İnfografiği" onerror="this.src='assets/family/family-kids-couch-3.jpg'">
             </div>
         </div>
@@ -1365,22 +1365,22 @@
                 <div class="game-banner" style="background: linear-gradient(135deg, #090d26, #1e1b4b);" onclick="openAlbum('marinext')">
                     <img src="assets/icon-192.png" alt="Marinext 2100" style="width: 110px; height: 110px; border-radius: 22px; box-shadow: 0 8px 25px rgba(0,0,0,0.6);" onerror="this.src='assets/icon-512.png'">
                     <span class="status-tag status-live" data-i18n="tagLive">🟢 YAYINDA • OYNANABİLİR</span>
-                    <span class="genre-tag">Aksiyon / 2D Platform</span>
+                    <span class="genre-tag" data-i18n="genreAction">Aksiyon / 2D Platform</span>
                 </div>
                 <div class="game-body">
                     <h3 class="game-title">Marinext 2100</h3>
                     <p class="game-desc" data-i18n="g1Desc">
                         100 bölüm ana sefer, 50 bölüm Trol Modu, 10 aksiyon dünyası, Play Games Liderlik Tablosu ve Fatih Sultan Mehmet'ten Siber Şövalye'ye uzanan 14 yetenekli kahraman!
                     </p>
-                    <div class="game-meta">
+                    <div class="game-meta" data-i18n="g1Chips">
                         <span class="meta-chip">📱 Android &amp; Web</span>
                         <span class="meta-chip">⚡ 120 FPS</span>
                         <span class="meta-chip">🌍 9 Dil</span>
                     </div>
                     <div class="game-actions">
-                        <button class="btn btn-primary" onclick="openGameModal()">🎮 Hemen Oyna</button>
-                        <button class="btn btn-outline" onclick="openAlbum('marinext')">🖼️ Albüm</button>
-                        <button class="btn btn-crimson" onclick="openVideoModal('marinext')">🎬 Video İzle</button>
+                        <button class="btn btn-primary" onclick="openGameModal()"><span data-i18n="btnPlayNow">🎮 Hemen Oyna</span></button>
+                        <button class="btn btn-outline" onclick="openAlbum('marinext')"><span data-i18n="btnCardAlbum">🖼️ Albüm</span></button>
+                        <button class="btn btn-crimson" onclick="openVideoModal('marinext')"><span data-i18n="btnCardVideo">🎬 Video İzle</span></button>
                     </div>
                 </div>
             </div>
@@ -1390,20 +1390,20 @@
                 <div class="game-banner" style="background: linear-gradient(135deg, #2a0a18, #451a03);" onclick="openAlbum('ottoman')">
                     <div class="game-banner-icon">⚔️</div>
                     <span class="status-tag status-dev" data-i18n="tagSoon">🚀 GELİŞTİRİLİYOR</span>
-                    <span class="genre-tag">Tarihi Strateji / RTS</span>
+                    <span class="genre-tag" data-i18n="genreStrategy">Tarihi Strateji / RTS</span>
                 </div>
                 <div class="game-body">
                     <h3 class="game-title">Ottoman Conquest: 1517</h3>
                     <p class="game-desc" data-i18n="g2Desc">
                         Yavuz Sultan Selim Han ve Osmanlı ordularıyla Ridaniye ve Mercidabık meydan muharebelerini yönettiğiniz gerçek zamanlı taktik ve kuşatma strateji oyunu.
                     </p>
-                    <div class="game-meta">
+                    <div class="game-meta" data-i18n="g2Chips">
                         <span class="meta-chip">📱 Android</span>
                         <span class="meta-chip">🏰 Taktik &amp; Ordu Yönetimi</span>
                     </div>
                     <div class="game-actions">
-                        <button class="btn btn-outline" onclick="openAlbum('ottoman')">🖼️ Albüm</button>
-                        <button class="btn btn-crimson" onclick="openVideoModal('ottoman')">🎬 Video İzle</button>
+                        <button class="btn btn-outline" onclick="openAlbum('ottoman')"><span data-i18n="btnCardAlbum">🖼️ Albüm</span></button>
+                        <button class="btn btn-crimson" onclick="openVideoModal('ottoman')"><span data-i18n="btnCardVideo">🎬 Video İzle</span></button>
                     </div>
                 </div>
             </div>
@@ -1413,20 +1413,20 @@
                 <div class="game-banner" style="background: linear-gradient(135deg, #042f2e, #0f172a);" onclick="openAlbum('neondrift')">
                     <div class="game-banner-icon">🏎️</div>
                     <span class="status-tag status-dev" data-i18n="tagSoon">🚀 GELİŞTİRİLİYOR</span>
-                    <span class="genre-tag">Siber Yarış / Arcade</span>
+                    <span class="genre-tag" data-i18n="genreRacing">Siber Yarış / Arcade</span>
                 </div>
                 <div class="game-body">
                     <h3 class="game-title">Neon Drift 2100: Cyber Horizon</h3>
                     <p class="game-desc" data-i18n="g3Desc">
                         2100 yılının neon otoyollarında yerçekimine meydan okuyan siber araçlarla yüksek hızlı drift, araç modifiye stüdyosu ve zamana karşı yarış deneyimi.
                     </p>
-                    <div class="game-meta">
+                    <div class="game-meta" data-i18n="g3Chips">
                         <span class="meta-chip">📱 Android &amp; Web</span>
                         <span class="meta-chip">⚡ 120 FPS Fizik Motoru</span>
                     </div>
                     <div class="game-actions">
-                        <button class="btn btn-outline" onclick="openAlbum('neondrift')">🖼️ Albüm</button>
-                        <button class="btn btn-crimson" onclick="openVideoModal('neondrift')">🎬 Video İzle</button>
+                        <button class="btn btn-outline" onclick="openAlbum('neondrift')"><span data-i18n="btnCardAlbum">🖼️ Albüm</span></button>
+                        <button class="btn btn-crimson" onclick="openVideoModal('neondrift')"><span data-i18n="btnCardVideo">🎬 Video İzle</span></button>
                     </div>
                 </div>
             </div>
@@ -1436,20 +1436,20 @@
                 <div class="game-banner" style="background: linear-gradient(135deg, #064e3b, #1e1b4b);" onclick="openAlbum('shadowdungeon')">
                     <div class="game-banner-icon">❖</div>
                     <span class="status-tag status-dev" data-i18n="tagSoon">🚀 GELİŞTİRİLİYOR</span>
-                    <span class="genre-tag">Zindan RPG / Roguelike</span>
+                    <span class="genre-tag" data-i18n="genreDungeon">Zindan RPG / Roguelike</span>
                 </div>
                 <div class="game-body">
                     <h3 class="game-title">Shadow Dungeon: Emerald Relics</h3>
                     <p class="game-desc" data-i18n="g4Desc">
                         Antik Zümrüt kalıntılarını korumak için prosedürel olarak üretilen karanlık zindanlarda Boss muhafızlarına karşı verilen aksiyon-RPG mücadelesi.
                     </p>
-                    <div class="game-meta">
+                    <div class="game-meta" data-i18n="g4Chips">
                         <span class="meta-chip">📱 Android</span>
                         <span class="meta-chip">🗡️ Boss Savaşları &amp; Ekipman</span>
                     </div>
                     <div class="game-actions">
-                        <button class="btn btn-outline" onclick="openAlbum('shadowdungeon')">🖼️ Albüm</button>
-                        <button class="btn btn-crimson" onclick="openVideoModal('shadowdungeon')">🎬 Video İzle</button>
+                        <button class="btn btn-outline" onclick="openAlbum('shadowdungeon')"><span data-i18n="btnCardAlbum">🖼️ Albüm</span></button>
+                        <button class="btn btn-crimson" onclick="openVideoModal('shadowdungeon')"><span data-i18n="btnCardVideo">🎬 Video İzle</span></button>
                     </div>
                 </div>
             </div>
@@ -1459,20 +1459,20 @@
                 <div class="game-banner" style="background: linear-gradient(135deg, #311042, #0f172a);" onclick="openAlbum('quantum')">
                     <div class="game-banner-icon">🧩</div>
                     <span class="status-tag status-dev" data-i18n="tagSoon">🚀 GELİŞTİRİLİYOR</span>
-                    <span class="genre-tag">Zeka &amp; Fizik Bulmacası</span>
+                    <span class="genre-tag" data-i18n="genrePuzzle">Zeka &amp; Fizik Bulmacası</span>
                 </div>
                 <div class="game-body">
                     <h3 class="game-title">Quantum Blocks: Gravity Lab</h3>
                     <p class="game-desc" data-i18n="g5Desc">
                         Solucan delikleri, lazer kırılmaları ve yerçekimi anahtarlarını kullanarak 100'den fazla kuantum laboratuvarı bulmacasını çözün.
                     </p>
-                    <div class="game-meta">
+                    <div class="game-meta" data-i18n="g5Chips">
                         <span class="meta-chip">📱 Android &amp; Tablet</span>
                         <span class="meta-chip">🧠 100+ Bölüm</span>
                     </div>
                     <div class="game-actions">
-                        <button class="btn btn-outline" onclick="openAlbum('quantum')">🖼️ Albüm</button>
-                        <button class="btn btn-crimson" onclick="openVideoModal('quantum')">🎬 Video İzle</button>
+                        <button class="btn btn-outline" onclick="openAlbum('quantum')"><span data-i18n="btnCardAlbum">🖼️ Albüm</span></button>
+                        <button class="btn btn-crimson" onclick="openVideoModal('quantum')"><span data-i18n="btnCardVideo">🎬 Video İzle</span></button>
                     </div>
                 </div>
             </div>
@@ -1482,20 +1482,20 @@
                 <div class="game-banner" style="background: linear-gradient(135deg, #172554, #090d16);" onclick="openAlbum('armada')">
                     <div class="game-banner-icon">🛸</div>
                     <span class="status-tag status-dev" data-i18n="tagSoon">🚀 GELİŞTİRİLİYOR</span>
-                    <span class="genre-tag">Uzay Aksiyon / Shoot 'em up</span>
+                    <span class="genre-tag" data-i18n="genreSpace">Uzay Aksiyon / Shoot 'em up</span>
                 </div>
                 <div class="game-body">
                     <h3 class="game-title">Galactic Armada: Star Defender</h3>
                     <p class="game-desc" data-i18n="g6Desc">
                         Yıldızlararası filonuzu yükseltin, plazma kalkanlarınızı kuşanın ve galaktik istilacıların dev ana gemilerine karşı uzay cephesini savunun.
                     </p>
-                    <div class="game-meta">
+                    <div class="game-meta" data-i18n="g6Chips">
                         <span class="meta-chip">📱 Android</span>
                         <span class="meta-chip">🔥 Sonsuz Dalga Modu</span>
                     </div>
                     <div class="game-actions">
-                        <button class="btn btn-outline" onclick="openAlbum('armada')">🖼️ Albüm</button>
-                        <button class="btn btn-crimson" onclick="openVideoModal('armada')">🎬 Video İzle</button>
+                        <button class="btn btn-outline" onclick="openAlbum('armada')"><span data-i18n="btnCardAlbum">🖼️ Albüm</span></button>
+                        <button class="btn btn-crimson" onclick="openVideoModal('armada')"><span data-i18n="btnCardVideo">🎬 Video İzle</span></button>
                     </div>
                 </div>
             </div>
@@ -1539,12 +1539,12 @@
     <div id="game-modal" class="game-modal">
         <div class="game-modal-bar">
             <div style="display:flex; align-items:center; gap:12px;">
-                <strong style="color: var(--gold); font-size: 16px;">🎮 Marinext 2100 — Canlı Oyun Ekranı</strong>
-                <span style="color: var(--text-muted); font-size: 13px;">(Tam ekran için sağdaki butonu kullanabilirsiniz)</span>
+                <strong style="color: var(--gold); font-size: 16px;" data-i18n="gameModalTitle">🎮 Marinext 2100 — Canlı Oyun Ekranı</strong>
+                <span style="color: var(--text-muted); font-size: 13px;" data-i18n="gameModalSub">(Tam ekran için sağdaki butonu kullanabilirsiniz)</span>
             </div>
             <div style="display:flex; gap:10px;">
-                <a href="https://cevatturk.github.io/2100-Mario/" target="_blank" class="btn btn-gold" style="padding: 6px 14px; font-size: 13px;">🚀 Yeni Sekmede Tam Ekran Aç</a>
-                <button class="btn btn-outline" style="padding: 6px 14px; font-size: 13px; border-color: var(--crimson); color: var(--crimson);" onclick="closeGameModal()">✕ Kapat</button>
+                <a href="https://cevatturk.github.io/2100-Mario/" target="_blank" class="btn btn-gold" style="padding: 6px 14px; font-size: 13px;" data-i18n="btnNewTab">🚀 Yeni Sekmede Tam Ekran Aç</a>
+                <button class="btn btn-outline" style="padding: 6px 14px; font-size: 13px; border-color: var(--crimson); color: var(--crimson);" onclick="closeGameModal()" data-i18n="btnClose">✕ Kapat</button>
             </div>
         </div>
         <iframe id="game-iframe" class="game-modal-frame" src="" allow="autoplay; fullscreen"></iframe>
@@ -1555,10 +1555,10 @@
         <div class="album-container">
             <div class="album-header">
                 <div class="album-header-title">
-                    <span id="album-title">🖼️ Marinext 2100 Albümü</span>
+                    <span id="album-title" data-i18n="defaultAlbumTitle">🖼️ Marinext 2100 Albümü</span>
                     <span id="album-counter" style="color:var(--cyan); font-size:13px; font-weight:700;">(1 / 10)</span>
                 </div>
-                <button class="album-close-btn" onclick="closeAlbumModal()">✕ Kapat</button>
+                <button class="album-close-btn" onclick="closeAlbumModal()" data-i18n="btnClose">✕ Kapat</button>
             </div>
             <div class="album-body">
                 <button class="album-nav-btn album-prev-btn" onclick="navigateAlbum(-1)">‹</button>
@@ -1580,11 +1580,11 @@
         <div class="video-container">
             <div class="album-header">
                 <div class="album-header-title">
-                    <span id="video-modal-title">🎬 Tanıtım &amp; Oynanış Videosu</span>
+                    <span id="video-modal-title" data-i18n="videoModalTitle">🎬 Tanıtım &amp; Oynanış Videosu</span>
                 </div>
                 <div style="display:flex; gap:8px;">
-                    <a id="video-external-btn" href="#" target="_blank" class="btn btn-gold" style="padding:5px 12px; font-size:12px;">YouTube'da Aç ↗</a>
-                    <button class="album-close-btn" onclick="closeVideoModal()">✕ Kapat</button>
+                    <a id="video-external-btn" href="#" target="_blank" class="btn btn-gold" style="padding:5px 12px; font-size:12px;" data-i18n="btnOpenYoutube">YouTube'da Aç ↗</a>
+                    <button class="album-close-btn" onclick="closeVideoModal()" data-i18n="btnClose">✕ Kapat</button>
                 </div>
             </div>
             <div class="video-wrapper">
@@ -1599,14 +1599,14 @@
             <div>
                 <strong style="color: #fff; font-size: 16px;">CG Studio Home &amp; Labs</strong>
                 <p style="color: var(--text-muted); font-size: 13px; margin-top: 4px;">
-                    © 2026 CG Studio Home &amp; Labs. Tüm hakları saklıdır. Bir Aile İçi Teknoloji ve Girişimcilik Projesidir. | İletişim: <a href="mailto:info@erpdanisman.com" style="color: var(--cyan);">info@erpdanisman.com</a>
+                    <span data-i18n="footerRights">© 2026 CG Studio Home &amp; Labs. Tüm hakları saklıdır. Bir Aile İçi Teknoloji ve Girişimcilik Projesidir. | İletişim:</span> <a href="mailto:info@erpdanisman.com" style="color: var(--cyan);">info@erpdanisman.com</a>
                 </p>
             </div>
             <div class="footer-links">
-                <a href="#family">Aile Hikayemiz</a>
-                <a href="https://cevatturk.github.io/2100-Mario/">Marinext 2100 Oyna</a>
-                <a href="https://cevatturk.github.io/marinext2100/release-notes.html">Sürüm Notları (Changelog)</a>
-                <a href="https://cevatturk.github.io/marinext2100/privacy-policy.html">Gizlilik Politikası (Privacy Policy)</a>
+                <a href="#family" data-i18n="footFamily">Aile Hikayemiz</a>
+                <a href="https://cevatturk.github.io/2100-Mario/" data-i18n="footPlay">Marinext 2100 Oyna</a>
+                <a href="https://cevatturk.github.io/marinext2100/release-notes.html" data-i18n="footChangelog">Sürüm Notları (Changelog)</a>
+                <a href="https://cevatturk.github.io/marinext2100/privacy-policy.html" data-i18n="footPrivacy">Gizlilik Politikası (Privacy Policy)</a>
                 <a href="https://cevatturk.github.io/app-ads.txt" target="_blank">app-ads.txt</a>
             </div>
         </div>
@@ -1902,40 +1902,71 @@
             });
         }
 
-        // I18N DATA (TR & EN)
+        // ==============================================================
+        // COMPLETE 100% I18N DICTIONARY (TR & EN)
+        // ==============================================================
         const I18N = {
             tr: {
+                pageTitle: "CG Studio Home & Labs | Aile Yapımı Oyunlar & Teknoloji Portalı",
+                metaDesc: "CG Studio Home & Labs — Aile yapımı bağımsız oyunlar ve yeni nesil mobil/web projeleri geliştirici portalı.",
+                studioSub: "AİLE OYUN & TEKNOLOJİ STÜDYOSU",
                 navFlagship: "Marinext 2100",
                 navFamily: "👨‍👩‍👧‍👦 Aile Hikayemiz & Ekip",
                 navCatalog: "Oyun Kataloğu",
                 navTech: "Teknoloji",
                 navChangelog: "Sürüm Notları",
                 navPrivacy: "Gizlilik Politikası",
-                studioSub: "AİLE OYUN & TEKNOLOJİ STÜDYOSU",
+
+                // Flagship Hero
                 heroBadge: "🔥 RESMİ GOOGLE PLAY LANSMANI • 10 YAŞINDAKİ OĞLUMUZUN HAYALİYLE BAŞLADI",
+                heroTitle: "<span>Marinext 2100</span> — Siber Gelecek & Tarihi Kahramanlar",
                 heroDesc: "10 yaşındaki oğlumuz Yavuz Selim'in hayal ettiği, tüm ailemizin birlikte test ettiği ve Google Play tarafından onaylanan 2D Retro Platform Macerası! Fatih Sultan Mehmet, Yavuz Sultan Selim, Kanuni Sultan Süleyman ve siber savaşçılarla 100 siber zindan, 50 trol etabı ve 120 FPS ultra akıcı motor.",
-                btnPlayInline: "Sayfa İçinde Hemen Oyna",
-                btnPlayFull: "Tam Ekran Web'de Aç",
-                btnFamilyStory: "Aile Hikayemiz & Ekip",
-                btnAlbum: "Resim Galerisi & Albüm",
-                btnVideo: "Video & Fragman İzle",
-                statTeam: "Tutkulu Aile Geliştirici Ekibi",
-                statLevels: "Özel Tasarım Bölüm (Marinext 2100)",
-                statFps: "Ultra Akıcı Oyun Motoru",
-                statLangs: "Global Otomatik Dil Desteği",
+                pillStages: "⚔️ 100 Kampanya + 50 Trol Bölümü",
+                pillHeroes: "👑 14 Karakter & Özel Yetenek",
+                pillFps: "⚡ 120 FPS Ultra Akıcı Motor",
+                pillLangs: "🌍 9 Dilde Tam Yerelleştirme",
+                btnPlayInline: "🎮 Sayfa İçinde Hemen Oyna",
+                btnPlayFull: "🚀 Tam Ekran Web'de Aç",
+                btnFamilyStory: "👨‍👩‍👧‍👦 Aile Hikayemiz & Ekip",
+                btnAlbum: "🖼️ Resim Galerisi & Albüm",
+                btnVideo: "🎬 Video & Fragman İzle",
+                heroInspectBadge: "Albümü İncele",
+                heroPackageInfo: "Paket Kimliği: <code>com.cgstudiohome.marinext2100</code> • Google Play Store Onaylı • Android 7.0 - 16 (API 36)",
+                heroVisualTitle: "Ekran görüntülerini ve albümü incelemek için tıklayın",
+
+                // Metrics Strip
+                statTeamNum: "4 Kişilik",
+                statTeamLabel: "Tutkulu Aile Geliştirici Ekibi",
+                statLevelsNum: "150",
+                statLevelsLabel: "Özel Tasarım Bölüm (Marinext 2100)",
+                statFpsNum: "120 FPS",
+                statFpsLabel: "Ultra Akıcı Oyun Motoru",
+                statLangsNum: "9 Dil",
+                statLangsLabel: "Global Otomatik Dil Desteği",
+
+                // Family Story Section
                 famBadge: "★ BİR AİLE İÇİ GİRİŞİMCİLİK VE TEKNOLOJİ VAKASI",
                 famTitleHighlight: "CG STUDIO HOME / LABS:",
                 famTitle: "10 Yaşında Bir Çocuğun Fikrinden Google Play Mağazasına",
-                famDesc: "Biz bir aileyiz: Cevat (Baba), Gönül (Anne), Yavuz Selim (10 Yaş) ve İsranur (6 Yaş). Çocuklarımızın sınırsız hayal gücünü yapay zeka ve profesyonel yazılım mühendisliğiyle harmanlayarak, tüm ailenin birlikte ürettiği, oynadığı ve test ettiği küresel projeler geliştiriyoruz.",
+                famDesc: "Biz bir aileyiz: <strong>Cevat (Baba), Gönül (Anne), Yavuz Selim (10 Yaş) ve İsranur (6 Yaş)</strong>. Çocuklarımızın sınırsız hayal gücünü yapay zeka ve profesyonel yazılım mühendisliğiyle harmanlayarak, tüm ailenin birlikte ürettiği, oynadığı ve test ettiği küresel projeler geliştiriyoruz.",
+                famPhotoTag: "Yavuz Selim & İsranur Cihaz Başında Testte",
+                famPhotoWrapTitle: "Büyütmek ve tüm test fotoğraflarını görmek için tıklayın",
                 famQuote: "\"Bir oyun sadece koddan ibaret değildir; bir çocuğun gözündeki heyecan ve tüm ailenin ortak emeğidir.\"",
+                nameCevat: "Cevat",
                 roleCevat: "Teknik Lider & Operasyon",
                 descCevat: "Google Antigravity ve yapay zeka iş akışları, Play Console yönetimi, ASO stratejisi, derleme mimarisi ve küresel lansman koordinasyonu.",
+                nameGonul: "Gönül",
                 roleGonul: "Kalite Kontrol & QA",
                 descGonul: "Bölüm testleri, hata tespiti, çapraz jenerasyon ergonomi analizi ve veli/okul doğrudan çevre iletişim koordinasyonu.",
+                nameYavuz: "Yavuz Selim (10 Yaş)",
                 roleYavuz: "Baş Oyun Tasarımcısı",
                 descYavuz: "Oyunun fikir babası, 100 siber zindan kurgusu, 50 akıl almaz trol etabı, tarihi sultan vizyonu ve ses efektleri konsepti.",
+                nameIsranur: "İsranur (6 Yaş)",
                 roleIsranur: "Junior Testçi & Deneyim",
                 descIsranur: "Küçük yaş grubu oynanabilirlik testleri, sezgisel dokunmatik kontroller, zorluk dengelemesi ve doğal çocuk tepkileri.",
+                familyInfographicTitle: "Aile İnfografiğini Tam Boyutta İncelemek İçin Tıklayın",
+
+                // Catalog Section
                 catalogTitle: "🎮 Stüdyo Oyun Kataloğumuz",
                 catalogSub: "Aksiyon, tarihi strateji, fütüristik yarış, zindan RPG ve zeka kategorilerindeki oyun portföyümüz.",
                 filterAll: "Tümü (6)",
@@ -1945,12 +1976,31 @@
                 filterPuzzle: "Bulmaca & RPG",
                 tagLive: "🟢 YAYINDA • OYNANABİLİR",
                 tagSoon: "🚀 GELİŞTİRİLİYOR",
+                genreAction: "Aksiyon / 2D Platform",
+                genreStrategy: "Tarihi Strateji / RTS",
+                genreRacing: "Siber Yarış / Arcade",
+                genreDungeon: "Zindan RPG / Roguelike",
+                genrePuzzle: "Zeka & Fizik Bulmacası",
+                genreSpace: "Uzay Aksiyon / Shoot 'em up",
+                btnPlayNow: "🎮 Hemen Oyna",
+                btnCardAlbum: "🖼️ Albüm",
+                btnCardVideo: "🎬 Video İzle",
+
+                // Games
                 g1Desc: "100 bölüm ana sefer, 50 bölüm Trol Modu, 10 aksiyon dünyası, Play Games Liderlik Tablosu ve Fatih Sultan Mehmet'ten Siber Şövalye'ye uzanan 14 yetenekli kahraman!",
+                g1Chips: '<span class="meta-chip">📱 Android &amp; Web</span><span class="meta-chip">⚡ 120 FPS</span><span class="meta-chip">🌍 9 Dil</span>',
                 g2Desc: "Yavuz Sultan Selim Han ve Osmanlı ordularıyla Ridaniye ve Mercidabık meydan muharebelerini yönettiğiniz gerçek zamanlı taktik ve kuşatma strateji oyunu.",
+                g2Chips: '<span class="meta-chip">📱 Android</span><span class="meta-chip">🏰 Taktik &amp; Ordu Yönetimi</span>',
                 g3Desc: "2100 yılının neon otoyollarında yerçekimine meydan okuyan siber araçlarla yüksek hızlı drift, araç modifiye stüdyosu ve zamana karşı yarış deneyimi.",
+                g3Chips: '<span class="meta-chip">📱 Android &amp; Web</span><span class="meta-chip">⚡ 120 FPS Fizik Motoru</span>',
                 g4Desc: "Antik Zümrüt kalıntılarını korumak için prosedürel olarak üretilen karanlık zindanlarda Boss muhafızlarına karşı verilen aksiyon-RPG mücadelesi.",
+                g4Chips: '<span class="meta-chip">📱 Android</span><span class="meta-chip">🗡️ Boss Savaşları &amp; Ekipman</span>',
                 g5Desc: "Solucan delikleri, lazer kırılmaları ve yerçekimi anahtarlarını kullanarak 100'den fazla kuantum laboratuvarı bulmacasını çözün.",
+                g5Chips: '<span class="meta-chip">📱 Android &amp; Tablet</span><span class="meta-chip">🧠 100+ Bölüm</span>',
                 g6Desc: "Yıldızlararası filonuzu yükseltin, plazma kalkanlarınızı kuşanın ve galaktik istilacıların dev ana gemilerine karşı uzay cephesini savunun.",
+                g6Chips: '<span class="meta-chip">📱 Android</span><span class="meta-chip">🔥 Sonsuz Dalga Modu</span>',
+
+                // Tech Section
                 techTitle: "⚡ Stüdyo Teknolojimiz ve Yaklaşımımız",
                 techSub: "Oyuncu dostu tasarım, yüksek kare hızı ve küresel erişilebilirlik standartlarımız.",
                 f1Title: "120 FPS Özel Oyun Motoru",
@@ -1960,55 +2010,117 @@
                 f3Title: "Kullanıcı Dostu Deneyim",
                 f3Desc: "Oyuncuyu yarıda kesmeyen, yalnızca ödüllü tercihlere ve dengeli bölüm geçişlerine dayanan oyuncu dostu ekonomi modeli.",
                 f4Title: "Gizlilik ve Güvenlik Önceliği",
-                f4Desc: "Google Play Store ve AdMob politikalarına tam uyumlu, kişisel verileri harici sunucularda toplamayan güvenli yerel kayıt sistemi."
+                f4Desc: "Google Play Store ve AdMob politikalarına tam uyumlu, kişisel verileri harici sunucularda toplamayan güvenli yerel kayıt sistemi.",
+
+                // Modals & Footer
+                defaultAlbumTitle: "🖼️ Marinext 2100 Albümü",
+                gameModalTitle: "🎮 Marinext 2100 — Canlı Oyun Ekranı",
+                gameModalSub: "(Tam ekran için sağdaki butonu kullanabilirsiniz)",
+                btnNewTab: "🚀 Yeni Sekmede Tam Ekran Aç",
+                btnClose: "✕ Kapat",
+                videoModalTitle: "🎬 Tanıtım & Oynanış Videosu",
+                btnOpenYoutube: "YouTube'da Aç ↗",
+                footerRights: "© 2026 CG Studio Home & Labs. Tüm hakları saklıdır. Bir Aile İçi Teknoloji ve Girişimcilik Projesidir. | İletişim:",
+                footFamily: "Aile Hikayemiz",
+                footPlay: "Marinext 2100 Oyna",
+                footChangelog: "Sürüm Notları (Changelog)",
+                footPrivacy: "Gizlilik Politikası (Privacy Policy)"
             },
             en: {
+                pageTitle: "CG Studio Home & Labs | Family-Crafted Games & Tech Portal",
+                metaDesc: "CG Studio Home & Labs — Family-crafted indie games and next-generation mobile & web development portal.",
+                studioSub: "FAMILY GAME & TECH STUDIO",
                 navFlagship: "Marinext 2100",
                 navFamily: "👨‍👩‍👧‍👦 Our Family Story & Team",
                 navCatalog: "Game Catalog",
                 navTech: "Technology",
                 navChangelog: "Changelog",
                 navPrivacy: "Privacy Policy",
-                studioSub: "FAMILY GAME & TECH STUDIO",
-                heroBadge: "🔥 OFFICIAL GOOGLE PLAY RELEASE • INSPIRED BY OUR 10-YEAR-OLD SON",
-                heroDesc: "Conceived by our 10-year-old son Yavuz Selim, playtested by the whole family, and approved on Google Play! A 2D Retro Cyberpunk Platformer featuring 100 story stages, 50 rage-inducing Troll levels, 14 historical legends, and 120 FPS fluid performance.",
-                btnPlayInline: "Play Instant Preview",
-                btnPlayFull: "Launch Fullscreen Web",
-                btnFamilyStory: "Our Family Story & Team",
-                btnAlbum: "Screenshots & Album",
-                btnVideo: "Watch Trailer & Video",
-                statTeam: "Dedicated Family Game Creators",
-                statLevels: "Handcrafted Stages (Marinext 2100)",
-                statFps: "Ultra-Smooth Engine",
-                statLangs: "Auto-Detected Languages",
+
+                // Flagship Hero
+                heroBadge: "🔥 OFFICIAL GOOGLE PLAY LAUNCH • INSPIRED BY OUR 10-YEAR-OLD SON",
+                heroTitle: "<span>Marinext 2100</span> — Cyber Future & Historical Legends",
+                heroDesc: "Conceived by our 10-year-old son Yavuz Selim, playtested by our entire family, and approved on Google Play! A 2D Retro Cyberpunk Platformer featuring Sultan Mehmed II, Sultan Selim I, Sultan Suleiman, and cyber warriors across 100 cyber dungeons, 50 troll levels, and 120 FPS smoothness.",
+                pillStages: "⚔️ 100 Campaign + 50 Troll Levels",
+                pillHeroes: "👑 14 Heroes & Special Abilities",
+                pillFps: "⚡ 120 FPS Ultra-Fluid Engine",
+                pillLangs: "🌍 9 Languages Full Localization",
+                btnPlayInline: "🎮 Play Instant Web Preview",
+                btnPlayFull: "🚀 Open Fullscreen Web",
+                btnFamilyStory: "👨‍👩‍👧‍👦 Our Family Story & Team",
+                btnAlbum: "🖼️ Screenshots & Album",
+                btnVideo: "🎬 Watch Trailer & Video",
+                heroInspectBadge: "Explore Album",
+                heroPackageInfo: "Package ID: <code>com.cgstudiohome.marinext2100</code> • Google Play Approved • Android 7.0 - 16 (API 36)",
+                heroVisualTitle: "Click to explore screenshots and the full gallery",
+
+                // Metrics Strip
+                statTeamNum: "4-Member",
+                statTeamLabel: "Passionate Family Indie Team",
+                statLevelsNum: "150",
+                statLevelsLabel: "Handcrafted Stages (Marinext 2100)",
+                statFpsNum: "120 FPS",
+                statFpsLabel: "Ultra-Smooth Gaming Engine",
+                statLangsNum: "9 Languages",
+                statLangsLabel: "Global Auto-Language Detection",
+
+                // Family Story Section
                 famBadge: "★ AN INDIE FAMILY VENTURE & TECH SUCCESS",
                 famTitleHighlight: "CG STUDIO HOME / LABS:",
-                famTitle: "From a 10-Year-Old's Dream to a Published Google Play Title",
-                famDesc: "We are a family team: Cevat (Father), Gönül (Mother), Yavuz Selim (10-Year-Old Son), and İsranur (6-Year-Old Daughter). We unite childhood creativity with cutting-edge AI and software craftsmanship to develop family-crafted games that the world can enjoy.",
+                famTitle: "From a 10-Year-Old's Dream to the Google Play Store",
+                famDesc: "We are a family team: <strong>Cevat (Father), Gönül (Mother), Yavuz Selim (10-Year-Old Son), and İsranur (6-Year-Old Daughter)</strong>. We combine children's boundless imagination with modern AI workflows and software engineering to craft global digital projects created and tested together by the whole family.",
+                famPhotoTag: "Yavuz Selim & İsranur Live Playtesting",
+                famPhotoWrapTitle: "Click to enlarge and view all playtesting photos",
                 famQuote: "\"A game is more than just code; it is the spark in a child's eyes and the shared passion of an entire family.\"",
+                nameCevat: "Cevat",
                 roleCevat: "Tech & AI Lead (Father / Coordinator)",
-                descCevat: "Antigravity 2.0 AI workflow, Play Console administration, ASO roadmap, build engineering, and global launch distribution.",
+                descCevat: "Antigravity 2.0 AI workflows, Play Console administration, ASO roadmap, build engineering, and global launch distribution.",
+                nameGonul: "Gönül",
                 roleGonul: "QA & Outreach Lead (Mother / Quality Tester)",
                 descGonul: "Gameplay stability testing, cross-generational ergonomics, bug triaging, and family/school community outreach.",
-                roleYavuz: "Game Designer (10-Year-Old Son / Creator)",
-                descYavuz: "Game architect, 100 cyber dungeon stages, 50 deceptive troll puzzle mechanics, Ottoman hero lore, and audio vision.",
-                roleIsranur: "Junior Playtester (6-Year-Old Daughter / Tester)",
-                descIsranur: "Early-age usability validation, intuitive touch controls, difficulty tuning, sound effects, and genuine child reactions.",
+                nameYavuz: "Yavuz Selim (Age 10)",
+                roleYavuz: "Lead Game Designer (Son / Creator)",
+                descYavuz: "Game architect, 100 cyber dungeon stages, 50 deceptive troll puzzle mechanics, Ottoman hero lore, and audio concepts.",
+                nameIsranur: "İsranur (Age 6)",
+                roleIsranur: "Junior Playtester (Daughter / Tester)",
+                descIsranur: "Early-age usability validation, intuitive touch controls, difficulty tuning, sound effects, and genuine child feedback.",
+                familyInfographicTitle: "Click to inspect the full team infographic",
+
+                // Catalog Section
                 catalogTitle: "🎮 Our Studio Game Catalog",
-                catalogSub: "Explore our lineup across action platformer, historical strategy, cyber racing, dungeon RPG, and puzzle genres.",
-                filterAll: "All Games (6)",
+                catalogSub: "Our game portfolio spanning action platformer, historical strategy, futuristic racing, dungeon RPG, and puzzle genres.",
+                filterAll: "All (6)",
                 filterAction: "Action & Platform",
                 filterStrategy: "Strategy & History",
                 filterRacing: "Racing & Arcade",
                 filterPuzzle: "Puzzle & RPG",
-                tagLive: "🟢 LIVE & PLAYABLE",
+                tagLive: "🟢 LIVE • PLAYABLE",
                 tagSoon: "🚀 IN DEVELOPMENT",
+                genreAction: "Action / 2D Platform",
+                genreStrategy: "Historical Strategy / RTS",
+                genreRacing: "Cyber Racing / Arcade",
+                genreDungeon: "Dungeon RPG / Roguelike",
+                genrePuzzle: "Physics & Puzzle",
+                genreSpace: "Space Action / Shmup",
+                btnPlayNow: "🎮 Play Now",
+                btnCardAlbum: "🖼️ Album",
+                btnCardVideo: "🎬 Watch Video",
+
+                // Games
                 g1Desc: "100 campaign stages, 50 Troll Mode levels, 10 action worlds, Play Games Leaderboards, and 14 unlockable heroes with unique gameplay perks!",
+                g1Chips: '<span class="meta-chip">📱 Android &amp; Web</span><span class="meta-chip">⚡ 120 FPS</span><span class="meta-chip">🌍 9 Languages</span>',
                 g2Desc: "Command Sultan Selim I and the Ottoman armies in historic battles with real-time siege tactics and unit formations.",
+                g2Chips: '<span class="meta-chip">📱 Android</span><span class="meta-chip">🏰 Tactical Army Command</span>',
                 g3Desc: "High-speed cyber drift racing on futuristic neon highways with full vehicle customization and 120 FPS physics.",
+                g3Chips: '<span class="meta-chip">📱 Android &amp; Web</span><span class="meta-chip">⚡ 120 FPS Physics Engine</span>',
                 g4Desc: "Battle dark dungeon guardians across procedurally generated caverns to protect the Ancient Emerald relics.",
+                g4Chips: '<span class="meta-chip">📱 Android</span><span class="meta-chip">🗡️ Boss Fights &amp; Gear</span>',
                 g5Desc: "Master wormhole teleporters, laser optics, and gravity switches across 100+ brain-teasing quantum lab puzzles.",
+                g5Chips: '<span class="meta-chip">📱 Android &amp; Tablet</span><span class="meta-chip">🧠 100+ Puzzles</span>',
                 g6Desc: "Upgrade your interstellar fleet, equip plasma shields, and defend the galaxy against colossal boss motherships.",
+                g6Chips: '<span class="meta-chip">📱 Android</span><span class="meta-chip">🔥 Endless Waves Mode</span>',
+
+                // Tech Section
                 techTitle: "⚡ Studio Technology & Philosophy",
                 techSub: "Built on player-first design, ultra-high frame rates, and global accessibility.",
                 f1Title: "120 FPS Proprietary Engine",
@@ -2018,28 +2130,74 @@
                 f3Title: "Player-First Experience",
                 f3Desc: "No intrusive interrupts; fair game progression built on optional rewarded videos and balanced checkpoints.",
                 f4Title: "Privacy & Security Assured",
-                f4Desc: "Fully compliant with Google Play Store & AdMob standards. Safe local storage without tracking personal data."
+                f4Desc: "Fully compliant with Google Play Store & AdMob standards. Safe local storage without tracking personal data.",
+
+                // Modals & Footer
+                defaultAlbumTitle: "🖼️ Marinext 2100 Showcase Album",
+                gameModalTitle: "🎮 Marinext 2100 — Live Game Screen",
+                gameModalSub: "(Use the button on the right for full screen)",
+                btnNewTab: "🚀 Open Fullscreen in New Tab",
+                btnClose: "✕ Close",
+                videoModalTitle: "🎬 Gameplay & Trailer Video",
+                btnOpenYoutube: "Open in YouTube ↗",
+                footerRights: "© 2026 CG Studio Home & Labs. All rights reserved. A Family Technology & Indie Venture. | Contact:",
+                footFamily: "Our Family Story",
+                footPlay: "Play Marinext 2100",
+                footChangelog: "Changelog & Notes",
+                footPrivacy: "Privacy Policy"
             }
         };
 
-        function switchLang(lang) {
-            currentLang = lang;
-            const dict = I18N[lang] || I18N.tr;
-            document.getElementById('lang-tr').classList.toggle('active', lang === 'tr');
-            document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+        function switchLang(lang, persist = false) {
+            currentLang = (lang === 'en') ? 'en' : 'tr';
+            if (persist) {
+                try { localStorage.setItem('cg_lang', currentLang); } catch (e) {}
+            }
+            document.documentElement.lang = currentLang;
+
+            const dict = I18N[currentLang];
+
+            // Page title & meta description
+            if (dict.pageTitle) document.title = dict.pageTitle;
+            const metaEl = document.getElementById('meta-description');
+            if (metaEl && dict.metaDesc) metaEl.setAttribute('content', dict.metaDesc);
+
+            // Toggle language buttons
+            const btnTr = document.getElementById('lang-tr');
+            const btnEn = document.getElementById('lang-en');
+            if (btnTr) btnTr.classList.toggle('active', currentLang === 'tr');
+            if (btnEn) btnEn.classList.toggle('active', currentLang === 'en');
+
+            // Replace all data-i18n elements
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const k = el.getAttribute('data-i18n');
-                if (dict[k]) el.textContent = dict[k];
+                if (dict[k] !== undefined) {
+                    if (dict[k].includes('<') && dict[k].includes('>')) {
+                        el.innerHTML = dict[k];
+                    } else {
+                        el.textContent = dict[k];
+                    }
+                }
             });
+
+            // Update tooltips / title attributes
+            const heroWrap = document.getElementById('hero-visual-wrap');
+            if (heroWrap && dict.heroVisualTitle) heroWrap.setAttribute('title', dict.heroVisualTitle);
+
+            const famPhotoWrap = document.getElementById('family-main-img-wrap');
+            if (famPhotoWrap && dict.famPhotoWrapTitle) famPhotoWrap.setAttribute('title', dict.famPhotoWrapTitle);
+
+            const famInfogWrap = document.getElementById('family-infographic-wrap');
+            if (famInfogWrap && dict.familyInfographicTitle) famInfogWrap.setAttribute('title', dict.familyInfographicTitle);
 
             // Switch dynamic images
             const promoImg = document.getElementById('hero-promo-img');
             if (promoImg) {
-                promoImg.src = (lang === 'en') ? 'assets/promo/marinext-promo-en.jpg' : 'assets/promo/marinext-promo-tr.png';
+                promoImg.src = (currentLang === 'en') ? 'assets/promo/marinext-promo-en.jpg' : 'assets/promo/marinext-promo-tr.png';
             }
             const infogImg = document.getElementById('family-team-infographic');
             if (infogImg) {
-                infogImg.src = (lang === 'en') ? 'assets/family/family-team-en.jpg' : 'assets/family/family-team-tr.png';
+                infogImg.src = (currentLang === 'en') ? 'assets/family/family-team-en.jpg' : 'assets/family/family-team-tr.png';
             }
 
             // Update open album if currently open
@@ -2052,11 +2210,34 @@
             }
         }
 
-        // Auto-detect browser language on load
-        (function() {
-            const navLang = (navigator.language || 'tr').toLowerCase();
-            if (!navLang.startsWith('tr')) {
-                switchLang('en');
+        // STRICT AUTO-DETECTION:
+        // 1. If user previously manually selected a language, use it.
+        // 2. If NO manual selection, check browser language:
+        //    - If language starts with 'tr' (Turkish), use Turkish.
+        //    - IF ANYTHING ELSE (English, French, German, Spanish, etc.), AUTOMATICALLY DEFAULT TO ENGLISH!
+        (function initLanguage() {
+            let saved = null;
+            try { saved = localStorage.getItem('cg_lang'); } catch (e) {}
+
+            if (saved === 'tr' || saved === 'en') {
+                switchLang(saved, false);
+                return;
+            }
+
+            const navLangs = navigator.languages || [navigator.language || ''];
+            let isTurkish = false;
+            for (const l of navLangs) {
+                if (l && l.toLowerCase().startsWith('tr')) {
+                    isTurkish = true;
+                    break;
+                }
+            }
+
+            if (isTurkish) {
+                switchLang('tr', false);
+            } else {
+                // All non-Turkish visitors get English 100% automatically!
+                switchLang('en', false);
             }
         })();
     </script>
