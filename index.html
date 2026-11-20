@@ -6,7 +6,8 @@
     <meta name="description" content="CG Studio Home — Marinext 2100 ve yeni nesil mobil & web oyunları geliştirici portalı.">
     <meta name="theme-color" content="#060814">
     <title>CG Studio Home | Oyun Stüdyosu & Geliştirici Portalı</title>
-    <link rel="icon" type="image/png" href="https://cevatturk.github.io/2100-Mario/assets/store/icon-192.png">
+    <link rel="icon" type="image/png" href="assets/icon-192.png">
+    <link rel="apple-touch-icon" href="assets/icon-192.png">
     <style>
         :root {
             --bg-dark: #050711;
@@ -49,7 +50,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(5, 7, 17, 0.88);
+            background: rgba(5, 7, 17, 0.92);
             backdrop-filter: blur(16px);
             border-bottom: 1px solid var(--border-glow);
             padding: 14px 28px;
@@ -85,6 +86,13 @@
             font-size: 20px;
             color: #050711;
             box-shadow: 0 0 20px rgba(0, 242, 254, 0.45);
+            overflow: hidden;
+        }
+
+        .brand-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .brand-text {
@@ -112,7 +120,7 @@
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 24px;
+            gap: 22px;
             flex-wrap: wrap;
         }
 
@@ -120,7 +128,7 @@
             color: var(--text-muted);
             text-decoration: none;
             font-weight: 600;
-            font-size: 14.5px;
+            font-size: 14px;
             transition: color 0.2s;
         }
 
@@ -130,9 +138,9 @@
 
         .lang-switch {
             display: flex;
-            gap: 6px;
+            gap: 4px;
             background: rgba(255, 255, 255, 0.05);
-            padding: 4px;
+            padding: 3px;
             border-radius: 10px;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
@@ -145,7 +153,7 @@
             border-radius: 7px;
             cursor: pointer;
             font-weight: 700;
-            font-size: 12.5px;
+            font-size: 12px;
             transition: all 0.2s;
         }
 
@@ -168,7 +176,7 @@
             border-radius: 26px;
             padding: 44px;
             display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
+            grid-template-columns: 1.25fr 0.75fr;
             gap: 36px;
             align-items: center;
             box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65), 0 0 40px rgba(0, 242, 254, 0.1);
@@ -184,16 +192,16 @@
             color: var(--emerald);
             padding: 6px 14px;
             border-radius: 999px;
-            font-size: 12.5px;
+            font-size: 12px;
             font-weight: 800;
             letter-spacing: 0.6px;
             margin-bottom: 16px;
         }
 
         .hero-title {
-            font-size: 46px;
+            font-size: 44px;
             font-weight: 900;
-            line-height: 1.12;
+            line-height: 1.15;
             margin-bottom: 16px;
             color: #ffffff;
         }
@@ -206,9 +214,9 @@
 
         .hero-desc {
             color: #cbd5e1;
-            font-size: 16.5px;
+            font-size: 16px;
             margin-bottom: 24px;
-            max-width: 640px;
+            max-width: 680px;
         }
 
         .hero-pills {
@@ -231,7 +239,7 @@
         .cta-group {
             display: flex;
             flex-wrap: wrap;
-            gap: 14px;
+            gap: 12px;
         }
 
         .btn {
@@ -239,14 +247,15 @@
             align-items: center;
             justify-content: center;
             gap: 9px;
-            padding: 14px 24px;
+            padding: 13px 22px;
             border-radius: 13px;
             font-weight: 800;
-            font-size: 15px;
+            font-size: 14.5px;
             text-decoration: none;
             cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
             border: none;
+            white-space: nowrap;
         }
 
         .btn:hover {
@@ -265,25 +274,67 @@
             box-shadow: 0 8px 25px rgba(245, 158, 11, 0.35);
         }
 
+        .btn-crimson {
+            background: linear-gradient(135deg, #ff2a85, #e11d48);
+            color: #ffffff;
+            box-shadow: 0 8px 25px rgba(255, 42, 133, 0.4);
+        }
+
         .btn-outline {
             background: rgba(255, 255, 255, 0.06);
             color: var(--text-main);
             border: 1px solid rgba(0, 242, 254, 0.45);
         }
 
+        .btn-outline:hover {
+            background: rgba(0, 242, 254, 0.15);
+            border-color: var(--cyan);
+        }
+
         .hero-visual {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 16px;
+            gap: 14px;
+            position: relative;
         }
 
-        .hero-visual img {
+        .hero-visual-wrapper {
+            position: relative;
+            cursor: pointer;
+            border-radius: 18px;
+            overflow: hidden;
+            border: 2px solid rgba(255, 209, 102, 0.6);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .hero-visual-wrapper:hover {
+            transform: scale(1.02);
+            box-shadow: 0 22px 50px rgba(0, 242, 254, 0.35);
+        }
+
+        .hero-visual-wrapper img {
             width: 100%;
             max-width: 440px;
-            border-radius: 18px;
-            border: 2px solid rgba(255, 209, 102, 0.5);
-            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+            display: block;
+        }
+
+        .hero-visual-badge {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            background: rgba(5, 7, 17, 0.85);
+            backdrop-filter: blur(8px);
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 11.5px;
+            color: var(--gold);
+            font-weight: 700;
+            border: 1px solid rgba(255, 209, 102, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
 
         /* Studio Stats Strip */
@@ -370,7 +421,7 @@
 
         .games-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
             gap: 24px;
         }
 
@@ -396,12 +447,24 @@
         }
 
         .game-banner {
-            height: 185px;
+            height: 195px;
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
+            cursor: pointer;
+        }
+
+        .game-banner-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s;
+        }
+
+        .game-banner:hover .game-banner-img {
+            transform: scale(1.06);
         }
 
         .game-banner-icon {
@@ -419,31 +482,36 @@
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            z-index: 2;
         }
 
         .status-live {
-            background: rgba(6, 214, 160, 0.22);
+            background: rgba(6, 214, 160, 0.25);
             border: 1px solid var(--emerald);
             color: var(--emerald);
+            backdrop-filter: blur(8px);
         }
 
         .status-dev {
-            background: rgba(255, 209, 102, 0.18);
+            background: rgba(255, 209, 102, 0.2);
             border: 1px solid var(--gold);
             color: var(--gold);
+            backdrop-filter: blur(8px);
         }
 
         .genre-tag {
             position: absolute;
             bottom: 12px;
             left: 14px;
-            background: rgba(5, 7, 17, 0.8);
+            background: rgba(5, 7, 17, 0.85);
+            backdrop-filter: blur(8px);
             padding: 4px 10px;
             border-radius: 8px;
             font-size: 11.5px;
             font-weight: 700;
             color: var(--cyan);
             border: 1px solid rgba(0, 242, 254, 0.3);
+            z-index: 2;
         }
 
         .game-body {
@@ -485,14 +553,208 @@
 
         .game-actions {
             display: flex;
-            gap: 10px;
+            gap: 8px;
             flex-wrap: wrap;
         }
 
         .game-actions .btn {
             flex: 1;
-            padding: 10px 14px;
-            font-size: 13.5px;
+            min-width: 105px;
+            padding: 10px 12px;
+            font-size: 13px;
+        }
+
+        /* Lightbox Image Album Modal */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            background: rgba(3, 5, 14, 0.96);
+            backdrop-filter: blur(12px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-overlay.open {
+            display: flex;
+        }
+
+        .album-container {
+            max-width: 1080px;
+            width: 100%;
+            background: var(--bg-card);
+            border: 1px solid var(--border-glow);
+            border-radius: 22px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.85);
+            animation: modalFadeIn 0.25s ease-out;
+        }
+
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: scale(0.96); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .album-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            background: rgba(5, 7, 17, 0.85);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .album-header-title {
+            font-size: 17px;
+            font-weight: 800;
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .album-close-btn {
+            background: transparent;
+            border: 1px solid rgba(255, 42, 133, 0.4);
+            color: var(--crimson);
+            border-radius: 10px;
+            padding: 6px 14px;
+            font-weight: 800;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .album-close-btn:hover {
+            background: var(--crimson);
+            color: #fff;
+        }
+
+        .album-body {
+            position: relative;
+            background: #020308;
+            min-height: 440px;
+            max-height: 65vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .album-body img {
+            max-width: 100%;
+            max-height: 65vh;
+            object-fit: contain;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        .album-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(14, 18, 38, 0.8);
+            color: #fff;
+            border: 1px solid var(--border-glow);
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+            z-index: 10;
+        }
+
+        .album-nav-btn:hover {
+            background: var(--cyan);
+            color: #050711;
+        }
+
+        .album-prev-btn { left: 16px; }
+        .album-next-btn { right: 16px; }
+
+        .album-footer {
+            padding: 16px 24px;
+            background: rgba(5, 7, 17, 0.85);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .album-caption-title {
+            font-size: 15px;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        .album-caption-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .album-thumbnails {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 4px;
+        }
+
+        .album-thumb {
+            width: 80px;
+            height: 48px;
+            border-radius: 8px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            object-fit: cover;
+            opacity: 0.6;
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+
+        .album-thumb:hover, .album-thumb.active {
+            opacity: 1;
+            border-color: var(--cyan);
+            transform: scale(1.05);
+        }
+
+        /* Video Player Modal */
+        .video-container {
+            max-width: 900px;
+            width: 100%;
+            background: var(--bg-card);
+            border: 1px solid var(--border-glow);
+            border-radius: 22px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.85);
+            animation: modalFadeIn 0.25s ease-out;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            background: #000;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
         }
 
         /* Embedded Game Modal */
@@ -600,7 +862,10 @@
                 padding: 28px;
             }
             .hero-title {
-                font-size: 34px;
+                font-size: 32px;
+            }
+            .album-body {
+                min-height: 280px;
             }
         }
     </style>
@@ -611,7 +876,9 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="brand">
-                <div class="brand-logo">CG</div>
+                <div class="brand-logo">
+                    <img src="assets/icon-192.png" alt="CG Studio Home Logo" onerror="this.style.display='none'">
+                </div>
                 <div class="brand-text">
                     <span class="brand-title">CG STUDIO HOME</span>
                     <span class="brand-sub" data-i18n="studioSub">GAME STUDIO &amp; PUBLISHER</span>
@@ -637,17 +904,17 @@
     <section id="flagship" class="hero-section">
         <div class="hero-card">
             <div>
-                <span class="hero-badge" data-i18n="heroBadge">🔥 AMİRAL GEMİSİ OYUN • HEMEN OYNA &amp; İNDİR</span>
+                <span class="hero-badge" data-i18n="heroBadge">🔥 AMİRAL GEMİSİ OYUN • 150 BÖLÜM &amp; 14 KAHRAMAN</span>
                 <h1 class="hero-title"><span>Marinext 2100</span> — Cyber &amp; Historical Action</h1>
                 <p class="hero-desc" data-i18n="heroDesc">
-                    Karanlık siber zindanlar, kristal mağaralar, 10 farklı aksiyon dünyası ve efsanevi tarihi kahramanların (Fatih Sultan Mehmet Han, Yavuz Sultan Selim Han, Kanuni Sultan Süleyman Han, Osmanlı Paşası, Siber Samuray, Özel Kuvvetler) buluştuğu 120 FPS aksiyon platform oyunu! 100 ana hikaye bölümü ve 50 zorlu Trol Modu bölümüyle şimdi yayında.
+                    Karanlık siber zindanlar, kristal mağaralar, 10 farklı aksiyon dünyası ve efsanevi tarihi kahramanların (Fatih Sultan Mehmet Han, Yavuz Sultan Selim Han, Kanuni Sultan Süleyman Han, Osmanlı Paşası, Siber Samuray, Özel Kuvvetler) buluştuğu 120 FPS aksiyon platform oyunu! 100 ana sefer bölümü ve 50 zorlu Trol Modu etabı ile tam 150 bölüm.
                 </p>
 
                 <div class="hero-pills">
                     <span class="stat-pill">⚔️ 100 Kampanya + 50 Trol Bölümü</span>
-                    <span class="stat-pill">👑 14 Karakter &amp; Gerçek Yetenekler</span>
-                    <span class="stat-pill">⚡ 30 / 60 / 120 FPS Akıcı Motor</span>
-                    <span class="stat-pill">🌍 9 Dil Otomatik Algılama</span>
+                    <span class="stat-pill">👑 14 Karakter &amp; Özel Yetenek</span>
+                    <span class="stat-pill">⚡ 120 FPS Ultra Akıcı Motor</span>
+                    <span class="stat-pill">🌍 9 Dilde Tam Yerelleştirme</span>
                 </div>
 
                 <div class="cta-group">
@@ -657,15 +924,23 @@
                     <a href="https://cevatturk.github.io/2100-Mario/" target="_blank" class="btn btn-gold">
                         🚀 <span data-i18n="btnPlayFull">Tam Ekran Web'de Aç</span>
                     </a>
-                    <a href="https://github.com/cevatturk/2100-Mario" target="_blank" class="btn btn-outline">
-                        📦 <span data-i18n="btnSource">Android &amp; Proje Sayfası</span>
-                    </a>
+                    <button class="btn btn-outline" onclick="openAlbum('marinext')">
+                        🖼️ <span data-i18n="btnAlbum">Resim Galerisi &amp; Albüm</span>
+                    </button>
+                    <button class="btn btn-crimson" onclick="openVideoModal('marinext')">
+                        🎬 <span data-i18n="btnVideo">Video &amp; Fragman İzle</span>
+                    </button>
                 </div>
             </div>
 
             <div class="hero-visual">
-                <img src="https://cevatturk.github.io/2100-Mario/assets/store/feature-graphic-1024x500.png" alt="Marinext 2100 Feature Graphic">
-                <small style="color: var(--text-muted); font-size: 12.5px;">Paket Kimliği: <code>com.cgstudiohome.marinext2100</code> • Android 16 (API 36) &amp; HTML5</small>
+                <div class="hero-visual-wrapper" onclick="openAlbum('marinext')" title="Ekran görüntülerini ve albümü incelemek için tıklayın">
+                    <img src="assets/feature-graphic-1024x500.jpg" alt="Marinext 2100 Feature Graphic" onerror="this.src='assets/icon-512.png'">
+                    <div class="hero-visual-badge">
+                        🔍 <span>Albümü İncele</span>
+                    </div>
+                </div>
+                <small style="color: var(--text-muted); font-size: 12.5px;">Paket Kimliği: <code>com.cgstudiohome.marinext2100</code> • Google Play Store Onaylı • Android 7.0 - 16 (API 36)</small>
             </div>
         </div>
     </section>
@@ -709,15 +984,15 @@
         <div class="games-grid" id="games-grid">
             <!-- Game 1: Marinext 2100 (FLAGSHIP LIVE) -->
             <div class="game-card featured" data-genre="action">
-                <div class="game-banner" style="background: linear-gradient(135deg, #090d26, #1e1b4b);">
-                    <img src="https://cevatturk.github.io/2100-Mario/assets/store/icon-192.png" alt="Marinext 2100" style="width: 110px; height: 110px; border-radius: 22px; box-shadow: 0 8px 25px rgba(0,0,0,0.6);">
+                <div class="game-banner" style="background: linear-gradient(135deg, #090d26, #1e1b4b);" onclick="openAlbum('marinext')">
+                    <img src="assets/icon-192.png" alt="Marinext 2100" style="width: 110px; height: 110px; border-radius: 22px; box-shadow: 0 8px 25px rgba(0,0,0,0.6);" onerror="this.src='assets/icon-512.png'">
                     <span class="status-tag status-live" data-i18n="tagLive">🟢 YAYINDA • OYNANABİLİR</span>
                     <span class="genre-tag">Aksiyon / 2D Platform</span>
                 </div>
                 <div class="game-body">
                     <h3 class="game-title">Marinext 2100</h3>
                     <p class="game-desc" data-i18n="g1Desc">
-                        100 bölüm ana görev, 15 bölüm Trol Modu, 10 aksiyon dünyası, Play Games Liderlik Tablosu ve Fatih Sultan Mehmet'ten Siber Şövalye'ye uzanan 14 yetenekli kahraman!
+                        100 bölüm ana sefer, 50 bölüm Trol Modu, 10 aksiyon dünyası, Play Games Liderlik Tablosu ve Fatih Sultan Mehmet'ten Siber Şövalye'ye uzanan 14 yetenekli kahraman!
                     </p>
                     <div class="game-meta">
                         <span class="meta-chip">📱 Android &amp; Web</span>
@@ -726,14 +1001,15 @@
                     </div>
                     <div class="game-actions">
                         <button class="btn btn-primary" onclick="openGameModal()">🎮 Hemen Oyna</button>
-                        <a href="https://cevatturk.github.io/2100-Mario/" target="_blank" class="btn btn-outline">Tam Ekran ↗</a>
+                        <button class="btn btn-outline" onclick="openAlbum('marinext')">🖼️ Albüm</button>
+                        <button class="btn btn-crimson" onclick="openVideoModal('marinext')">🎬 Video İzle</button>
                     </div>
                 </div>
             </div>
 
             <!-- Game 2: Ottoman Conquest 1517 -->
             <div class="game-card" data-genre="strategy">
-                <div class="game-banner" style="background: linear-gradient(135deg, #2a0a18, #451a03);">
+                <div class="game-banner" style="background: linear-gradient(135deg, #2a0a18, #451a03);" onclick="openAlbum('ottoman')">
                     <div class="game-banner-icon">⚔️</div>
                     <span class="status-tag status-dev" data-i18n="tagSoon">🚀 GELİŞTİRİLİYOR</span>
                     <span class="genre-tag">Tarihi Strateji / RTS</span>
@@ -748,14 +1024,15 @@
                         <span class="meta-chip">🏰 Taktik &amp; Ordu Yönetimi</span>
                     </div>
                     <div class="game-actions">
-                        <a href="#flagship" class="btn btn-outline" onclick="openGameModal()">👑 Yavuz Sultan Selim'i Marinext 2100'de Dene</a>
+                        <button class="btn btn-outline" onclick="openAlbum('ottoman')">🖼️ Albüm</button>
+                        <button class="btn btn-crimson" onclick="openVideoModal('ottoman')">🎬 Video İzle</button>
                     </div>
                 </div>
             </div>
 
             <!-- Game 3: Neon Drift 2100 -->
             <div class="game-card" data-genre="racing">
-                <div class="game-banner" style="background: linear-gradient(135deg, #042f2e, #0f172a);">
+                <div class="game-banner" style="background: linear-gradient(135deg, #042f2e, #0f172a);" onclick="openAlbum('neondrift')">
                     <div class="game-banner-icon">🏎️</div>
                     <span class="status-tag status-dev" data-i18n="tagSoon">🚀 GELİŞTİRİLİYOR</span>
                     <span class="genre-tag">Siber Yarış / Arcade</span>
@@ -770,14 +1047,15 @@
                         <span class="meta-chip">⚡ 120 FPS Fizik Motoru</span>
                     </div>
                     <div class="game-actions">
-                        <span class="btn btn-outline" style="opacity:0.75; cursor:default;">📅 Yakında Google Play'de</span>
+                        <button class="btn btn-outline" onclick="openAlbum('neondrift')">🖼️ Albüm</button>
+                        <button class="btn btn-crimson" onclick="openVideoModal('neondrift')">🎬 Video İzle</button>
                     </div>
                 </div>
             </div>
 
             <!-- Game 4: Shadow Dungeon: Emerald Relics -->
             <div class="game-card" data-genre="puzzle">
-                <div class="game-banner" style="background: linear-gradient(135deg, #064e3b, #1e1b4b);">
+                <div class="game-banner" style="background: linear-gradient(135deg, #064e3b, #1e1b4b);" onclick="openAlbum('shadowdungeon')">
                     <div class="game-banner-icon">❖</div>
                     <span class="status-tag status-dev" data-i18n="tagSoon">🚀 GELİŞTİRİLİYOR</span>
                     <span class="genre-tag">Zindan RPG / Roguelike</span>
@@ -792,14 +1070,15 @@
                         <span class="meta-chip">🗡️ Boss Savaşları &amp; Ekipman</span>
                     </div>
                     <div class="game-actions">
-                        <span class="btn btn-outline" style="opacity:0.75; cursor:default;">📅 Yakında Google Play'de</span>
+                        <button class="btn btn-outline" onclick="openAlbum('shadowdungeon')">🖼️ Albüm</button>
+                        <button class="btn btn-crimson" onclick="openVideoModal('shadowdungeon')">🎬 Video İzle</button>
                     </div>
                 </div>
             </div>
 
             <!-- Game 5: Quantum Blocks: AI Puzzle -->
             <div class="game-card" data-genre="puzzle">
-                <div class="game-banner" style="background: linear-gradient(135deg, #311042, #0f172a);">
+                <div class="game-banner" style="background: linear-gradient(135deg, #311042, #0f172a);" onclick="openAlbum('quantum')">
                     <div class="game-banner-icon">🧩</div>
                     <span class="status-tag status-dev" data-i18n="tagSoon">🚀 GELİŞTİRİLİYOR</span>
                     <span class="genre-tag">Zeka &amp; Fizik Bulmacası</span>
@@ -814,14 +1093,15 @@
                         <span class="meta-chip">🧠 100+ Bölüm</span>
                     </div>
                     <div class="game-actions">
-                        <span class="btn btn-outline" style="opacity:0.75; cursor:default;">📅 Yakında Google Play'de</span>
+                        <button class="btn btn-outline" onclick="openAlbum('quantum')">🖼️ Albüm</button>
+                        <button class="btn btn-crimson" onclick="openVideoModal('quantum')">🎬 Video İzle</button>
                     </div>
                 </div>
             </div>
 
             <!-- Game 6: Galactic Armada -->
             <div class="game-card" data-genre="action">
-                <div class="game-banner" style="background: linear-gradient(135deg, #172554, #090d16);">
+                <div class="game-banner" style="background: linear-gradient(135deg, #172554, #090d16);" onclick="openAlbum('armada')">
                     <div class="game-banner-icon">🛸</div>
                     <span class="status-tag status-dev" data-i18n="tagSoon">🚀 GELİŞTİRİLİYOR</span>
                     <span class="genre-tag">Uzay Aksiyon / Shoot 'em up</span>
@@ -836,7 +1116,8 @@
                         <span class="meta-chip">🔥 Sonsuz Dalga Modu</span>
                     </div>
                     <div class="game-actions">
-                        <span class="btn btn-outline" style="opacity:0.75; cursor:default;">📅 Yakında Google Play'de</span>
+                        <button class="btn btn-outline" onclick="openAlbum('armada')">🖼️ Albüm</button>
+                        <button class="btn btn-crimson" onclick="openVideoModal('armada')">🎬 Video İzle</button>
                     </div>
                 </div>
             </div>
@@ -891,6 +1172,49 @@
         <iframe id="game-iframe" class="game-modal-frame" src="" allow="autoplay; fullscreen"></iframe>
     </div>
 
+    <!-- Lightbox Image Album Modal -->
+    <div id="album-modal" class="modal-overlay" onclick="handleModalOverlayClick(event, 'album-modal')">
+        <div class="album-container">
+            <div class="album-header">
+                <div class="album-header-title">
+                    <span id="album-title">🖼️ Marinext 2100 Albümü</span>
+                    <span id="album-counter" style="color:var(--cyan); font-size:13px; font-weight:700;">(1 / 4)</span>
+                </div>
+                <button class="album-close-btn" onclick="closeAlbumModal()">✕ Kapat</button>
+            </div>
+            <div class="album-body">
+                <button class="album-nav-btn album-prev-btn" onclick="navigateAlbum(-1)">‹</button>
+                <img id="album-current-img" src="" alt="Album Image">
+                <button class="album-nav-btn album-next-btn" onclick="navigateAlbum(1)">›</button>
+            </div>
+            <div class="album-footer">
+                <div>
+                    <div id="album-caption-title" class="album-caption-title"></div>
+                    <div id="album-caption-desc" class="album-caption-desc"></div>
+                </div>
+                <div class="album-thumbnails" id="album-thumbnails"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Player Modal -->
+    <div id="video-modal" class="modal-overlay" onclick="handleModalOverlayClick(event, 'video-modal')">
+        <div class="video-container">
+            <div class="album-header">
+                <div class="album-header-title">
+                    <span id="video-modal-title">🎬 Tanıtım &amp; Oynanış Videosu</span>
+                </div>
+                <div style="display:flex; gap:8px;">
+                    <a id="video-external-btn" href="#" target="_blank" class="btn btn-gold" style="padding:5px 12px; font-size:12px;">YouTube'da Aç ↗</a>
+                    <button class="album-close-btn" onclick="closeVideoModal()">✕ Kapat</button>
+                </div>
+            </div>
+            <div class="video-wrapper">
+                <iframe id="video-iframe" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer>
         <div class="footer-inner">
@@ -905,12 +1229,234 @@
                 <a href="https://cevatturk.github.io/marinext2100/release-notes.html">Marinext 2100 Sürüm Notları (Changelog)</a>
                 <a href="https://cevatturk.github.io/marinext2100/privacy-policy.html">Marinext 2100 Gizlilik Politikası (Privacy Policy)</a>
                 <a href="https://cevatturk.github.io/app-ads.txt" target="_blank">app-ads.txt</a>
-                <a href="https://github.com/cevatturk/2100-Mario" target="_blank">GitHub</a>
             </div>
         </div>
     </footer>
 
     <script>
+        let currentLang = 'tr';
+
+        // ALBUMS DATA
+        const ALBUMS = {
+            marinext: {
+                title: { tr: "Marinext 2100 — Resmi Ekran Görüntüleri & Galeri", en: "Marinext 2100 — Official Screenshots & Gallery" },
+                images: [
+                    {
+                        src: { tr: "assets/screenshots/marinext-1-tr.png", en: "assets/screenshots/marinext-1-en.png" },
+                        title: { tr: "100 Sefer Bölümü & 120 FPS Ultra Akıcılık", en: "100 Campaign Levels & 120 FPS Ultra Smoothness" },
+                        desc: { tr: "Siber zindanlar, asansör mekanikleri, dinamik engeller ve sıfır gecikmeli konsol akıcılığı.", en: "Cyber dungeons, elevator mechanics, dynamic obstacles, and zero-latency console-grade fluidity." }
+                    },
+                    {
+                        src: { tr: "assets/screenshots/marinext-2-tr.png", en: "assets/screenshots/marinext-2-en.png" },
+                        title: { tr: "14 Efsanevi Tarihi ve Siber Kahraman", en: "14 Legendary Historical & Cyber Heroes" },
+                        desc: { tr: "Fatih Sultan Mehmet, Yavuz Sultan Selim, Kanuni Sultan Süleyman, Osmanlı Paşası, Siber Samuray ve Özel Kuvvetler!", en: "Sultan Mehmed II, Sultan Selim I, Sultan Suleiman the Magnificent, Ottoman Pasha, Cyber Samurai, and Special Forces!" }
+                    },
+                    {
+                        src: { tr: "assets/screenshots/marinext-3-tr.png", en: "assets/screenshots/marinext-3-en.png" },
+                        title: { tr: "Destansı Boss Savaşları & Karakter Stüdyosu", en: "Epic Boss Fights & Dynamic Character Studio" },
+                        desc: { tr: "Her 10 bölümde bir dev Boss karşılaşması, kostüm özelleştirme ve özel yetenek geliştirmeleri.", en: "Colossal boss encounters every 10 levels, custom skin wardrobe, and unique skill trees." }
+                    },
+                    {
+                        src: { tr: "assets/screenshots/marinext-4-tr.png", en: "assets/screenshots/marinext-4-en.png" },
+                        title: { tr: "50 Bölümlük Trol Modu & 9 Dil Küresel Destek", en: "50-Stage Troll Mode & Global 9-Language Support" },
+                        desc: { tr: "Yaratıcı tuzaklarla dolu 50 Trol Modu etabı, Play Games Liderlik Tablosu ve otomatik 9 dil algılama.", en: "50 brain-melting Troll Mode stages filled with deceptive traps, Play Games leaderboards, and auto 9 languages." }
+                    }
+                ]
+            },
+            ottoman: {
+                title: { tr: "Ottoman Conquest: 1517 — Konsept Galerisi", en: "Ottoman Conquest: 1517 — Concept Gallery" },
+                images: [
+                    {
+                        src: { tr: "assets/screenshots/marinext-2-tr.png", en: "assets/screenshots/marinext-2-en.png" },
+                        title: { tr: "Yavuz Sultan Selim Han & Ridaniye Seferi", en: "Sultan Selim I & The Ridaniya Campaign" },
+                        desc: { tr: "Tarihi meydan muharebeleri, yeniçeri taburları ve sahra toplarıyla taktiksel ordu yönetimi.", en: "Historical battlefield command, Janissary battalions, and tactical field artillery sieges." }
+                    }
+                ]
+            },
+            neondrift: {
+                title: { tr: "Neon Drift 2100 — Konsept Galerisi", en: "Neon Drift 2100 — Concept Gallery" },
+                images: [
+                    {
+                        src: { tr: "assets/feature-graphic-1024x500.jpg", en: "assets/feature-graphic-1024x500.jpg" },
+                        title: { tr: "2100 Siber Otoyollarında Yerçekimsiz Drift", en: "Zero-G Drifting on 2100 Cyber Highways" },
+                        desc: { tr: "120 FPS fizik motoru, neon pistler, özel araç modifiye garajı ve zamana karşı yarış.", en: "120 FPS physics, neon-lit tracks, deep vehicle modification garage, and time-attack trials." }
+                    }
+                ]
+            },
+            shadowdungeon: {
+                title: { tr: "Shadow Dungeon — Konsept Galerisi", en: "Shadow Dungeon — Concept Gallery" },
+                images: [
+                    {
+                        src: { tr: "assets/screenshots/marinext-3-tr.png", en: "assets/screenshots/marinext-3-en.png" },
+                        title: { tr: "Karanlık Zindan Muhafızları & Zümrüt Kalıntılar", en: "Dark Dungeon Guardians & Emerald Relics" },
+                        desc: { tr: "Prosedürel zindanlar, antik kalıntılar ve zengin ekipman yükseltme sistemleri.", en: "Procedural dungeons, ancient relics, and deep loot crafting mechanics." }
+                    }
+                ]
+            },
+            quantum: {
+                title: { tr: "Quantum Blocks: Gravity Lab — Konsept Galerisi", en: "Quantum Blocks: Gravity Lab — Concept Gallery" },
+                images: [
+                    {
+                        src: { tr: "assets/screenshots/marinext-1-tr.png", en: "assets/screenshots/marinext-1-en.png" },
+                        title: { tr: "Solucan Delikleri & Yerçekimi Bulmacaları", en: "Wormholes & Gravity Puzzles" },
+                        desc: { tr: "Lazer kırılmaları ve kuantum labirentleriyle zihni zorlayan 100'den fazla bölüm.", en: "Laser refraction and quantum lab mazes spanning over 100 mind-bending levels." }
+                    }
+                ]
+            },
+            armada: {
+                title: { tr: "Galactic Armada — Konsept Galerisi", en: "Galactic Armada — Concept Gallery" },
+                images: [
+                    {
+                        src: { tr: "assets/feature-graphic-1024x500.jpg", en: "assets/feature-graphic-1024x500.jpg" },
+                        title: { tr: "Yıldızlararası Uzay Cephesi & Ana Gemiler", en: "Interstellar Space Front & Boss Motherships" },
+                        desc: { tr: "Plazma kalkanları, filo yükseltmeleri ve galaktik istilacılara karşı sonsuz dalga savunması.", en: "Plasma shields, fleet upgrades, and endless wave survival against colossal alien motherships." }
+                    }
+                ]
+            }
+        };
+
+        // YOUTUBE VIDEO LINKS (Kullanıcı dilediği YouTube video linkini veya ID'sini buraya ekleyebilir)
+        const GAME_VIDEOS = {
+            marinext: {
+                title: { tr: "Marinext 2100 — Resmi Tanıtım & Oynanış Fragmanı", en: "Marinext 2100 — Official Gameplay & Launch Trailer" },
+                // Varsayılan resmi video linki (YouTube Video ID veya gömülü URL)
+                embedUrl: "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1",
+                watchUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            },
+            ottoman: {
+                title: { tr: "Ottoman Conquest: 1517 — Oynanış Tanıtımı", en: "Ottoman Conquest: 1517 — Gameplay Teaser" },
+                embedUrl: "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1",
+                watchUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            },
+            neondrift: {
+                title: { tr: "Neon Drift 2100 — Yüksek Hız Drift Tanıtımı", en: "Neon Drift 2100 — High-Speed Drift Teaser" },
+                embedUrl: "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1",
+                watchUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            },
+            shadowdungeon: {
+                title: { tr: "Shadow Dungeon — Zindan Oynanış Tanıtımı", en: "Shadow Dungeon — Dungeon Gameplay Teaser" },
+                embedUrl: "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1",
+                watchUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            },
+            quantum: {
+                title: { tr: "Quantum Blocks — Bulmaca Mekanikleri Tanıtımı", en: "Quantum Blocks — Puzzle Mechanics Teaser" },
+                embedUrl: "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1",
+                watchUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            },
+            armada: {
+                title: { tr: "Galactic Armada — Uzay Savaşı Fragmanı", en: "Galactic Armada — Space Battle Teaser" },
+                embedUrl: "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1",
+                watchUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            }
+        };
+
+        // ALBUM STATE
+        let activeAlbumKey = 'marinext';
+        let activeImageIndex = 0;
+
+        function openAlbum(albumKey, initialIndex = 0) {
+            activeAlbumKey = albumKey || 'marinext';
+            activeImageIndex = initialIndex;
+            const album = ALBUMS[activeAlbumKey];
+            if (!album) return;
+
+            document.getElementById('album-title').textContent = '🖼️ ' + (album.title[currentLang] || album.title.tr);
+            renderAlbumSlide();
+            renderAlbumThumbnails();
+            document.getElementById('album-modal').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeAlbumModal() {
+            document.getElementById('album-modal').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        function renderAlbumSlide() {
+            const album = ALBUMS[activeAlbumKey];
+            if (!album || !album.images.length) return;
+
+            if (activeImageIndex < 0) activeImageIndex = album.images.length - 1;
+            if (activeImageIndex >= album.images.length) activeImageIndex = 0;
+
+            const item = album.images[activeImageIndex];
+            const imgSrc = (typeof item.src === 'object') ? (item.src[currentLang] || item.src.tr) : item.src;
+            const imgEl = document.getElementById('album-current-img');
+            imgEl.style.opacity = '0.3';
+            setTimeout(() => {
+                imgEl.src = imgSrc;
+                imgEl.style.opacity = '1';
+            }, 100);
+
+            document.getElementById('album-counter').textContent = `(${activeImageIndex + 1} / ${album.images.length})`;
+            document.getElementById('album-caption-title').textContent = item.title[currentLang] || item.title.tr;
+            document.getElementById('album-caption-desc').textContent = item.desc[currentLang] || item.desc.tr;
+
+            // Highlight thumbnail
+            document.querySelectorAll('.album-thumb').forEach((thumb, idx) => {
+                thumb.classList.toggle('active', idx === activeImageIndex);
+            });
+        }
+
+        function renderAlbumThumbnails() {
+            const album = ALBUMS[activeAlbumKey];
+            const thumbsContainer = document.getElementById('album-thumbnails');
+            thumbsContainer.innerHTML = '';
+            album.images.forEach((item, idx) => {
+                const thumb = document.createElement('img');
+                thumb.className = 'album-thumb' + (idx === activeImageIndex ? ' active' : '');
+                thumb.src = (typeof item.src === 'object') ? (item.src[currentLang] || item.src.tr) : item.src;
+                thumb.alt = 'Thumbnail ' + (idx + 1);
+                thumb.onclick = () => {
+                    activeImageIndex = idx;
+                    renderAlbumSlide();
+                };
+                thumbsContainer.appendChild(thumb);
+            });
+        }
+
+        function navigateAlbum(delta) {
+            activeImageIndex += delta;
+            renderAlbumSlide();
+        }
+
+        // VIDEO MODAL
+        function openVideoModal(gameKey) {
+            const videoData = GAME_VIDEOS[gameKey] || GAME_VIDEOS.marinext;
+            const title = videoData.title[currentLang] || videoData.title.tr;
+            document.getElementById('video-modal-title').textContent = '🎬 ' + title;
+            document.getElementById('video-external-btn').href = videoData.watchUrl;
+            document.getElementById('video-iframe').src = videoData.embedUrl;
+            document.getElementById('video-modal').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeVideoModal() {
+            document.getElementById('video-modal').classList.remove('open');
+            document.getElementById('video-iframe').src = '';
+            document.body.style.overflow = '';
+        }
+
+        function handleModalOverlayClick(event, modalId) {
+            if (event.target.id === modalId) {
+                if (modalId === 'album-modal') closeAlbumModal();
+                if (modalId === 'video-modal') closeVideoModal();
+            }
+        }
+
+        // KEYBOARD SHORTCUTS FOR MODALS
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeAlbumModal();
+                closeVideoModal();
+                closeGameModal();
+            } else if (document.getElementById('album-modal').classList.contains('open')) {
+                if (e.key === 'ArrowLeft') navigateAlbum(-1);
+                if (e.key === 'ArrowRight') navigateAlbum(1);
+            }
+        });
+
+        // INLINE GAME MODAL
         function openGameModal() {
             const modal = document.getElementById('game-modal');
             const iframe = document.getElementById('game-iframe');
@@ -918,6 +1464,7 @@
                 iframe.src = 'https://cevatturk.github.io/2100-Mario/';
             }
             modal.classList.add('open');
+            document.body.style.overflow = 'hidden';
         }
 
         function closeGameModal() {
@@ -925,6 +1472,7 @@
             const iframe = document.getElementById('game-iframe');
             modal.classList.remove('open');
             iframe.src = '';
+            document.body.style.overflow = '';
         }
 
         function filterGames(genre, btn) {
@@ -946,11 +1494,13 @@
                 navTech: "Teknoloji",
                 navChangelog: "Sürüm Notları",
                 navPrivacy: "Gizlilik Politikası",
-                heroBadge: "🔥 AMİRAL GEMİSİ OYUN • HEMEN OYNA & İNDİR",
-                heroDesc: "Karanlık siber zindanlar, kristal mağaralar, 10 farklı aksiyon dünyası ve efsanevi tarihi kahramanların (Fatih Sultan Mehmet Han, Yavuz Sultan Selim Han, Kanuni Sultan Süleyman Han, Osmanlı Paşası, Siber Samuray, Özel Kuvvetler) buluştuğu 120 FPS aksiyon platform oyunu! 100 ana hikaye bölümü ve 50 zorlu Trol Modu bölümüyle şimdi yayında.",
+                studioSub: "OYUN STÜDYOSU & GELİŞTİRİCİ PORTALI",
+                heroBadge: "🔥 AMİRAL GEMİSİ OYUN • 150 BÖLÜM & 14 KAHRAMAN",
+                heroDesc: "Karanlık siber zindanlar, kristal mağaralar, 10 farklı aksiyon dünyası ve efsanevi tarihi kahramanların (Fatih Sultan Mehmet Han, Yavuz Sultan Selim Han, Kanuni Sultan Süleyman Han, Osmanlı Paşası, Siber Samuray, Özel Kuvvetler) buluştuğu 120 FPS aksiyon platform oyunu! 100 ana sefer bölümü ve 50 zorlu Trol Modu etabı ile tam 150 bölüm.",
                 btnPlayInline: "Sayfa İçinde Hemen Oyna",
                 btnPlayFull: "Tam Ekran Web'de Aç",
-                btnSource: "Android & Proje Sayfası",
+                btnAlbum: "Resim Galerisi & Albüm",
+                btnVideo: "Video & Fragman İzle",
                 statGames: "Farklı Türde Oyun Projesi",
                 statLevels: "Özel Tasarım Bölüm (Marinext 2100)",
                 statFps: "Ultra Akıcı Oyun Motoru",
@@ -964,14 +1514,22 @@
                 filterPuzzle: "Bulmaca & RPG",
                 tagLive: "🟢 YAYINDA • OYNANABİLİR",
                 tagSoon: "🚀 GELİŞTİRİLİYOR",
-                g1Desc: "100 bölüm ana görev, 50 bölüm Trol Modu, 10 aksiyon dünyası, Play Games Liderlik Tablosu ve Fatih Sultan Mehmet'ten Siber Şövalye'ye uzanan 14 yetenekli kahraman!",
+                g1Desc: "100 bölüm ana sefer, 50 bölüm Trol Modu, 10 aksiyon dünyası, Play Games Liderlik Tablosu ve Fatih Sultan Mehmet'ten Siber Şövalye'ye uzanan 14 yetenekli kahraman!",
                 g2Desc: "Yavuz Sultan Selim Han ve Osmanlı ordularıyla Ridaniye ve Mercidabık meydan muharebelerini yönettiğiniz gerçek zamanlı taktik ve kuşatma strateji oyunu.",
                 g3Desc: "2100 yılının neon otoyollarında yerçekimine meydan okuyan siber araçlarla yüksek hızlı drift, araç modifiye stüdyosu ve zamana karşı yarış deneyimi.",
                 g4Desc: "Antik Zümrüt kalıntılarını korumak için prosedürel olarak üretilen karanlık zindanlarda Boss muhafızlarına karşı verilen aksiyon-RPG mücadelesi.",
                 g5Desc: "Solucan delikleri, lazer kırılmaları ve yerçekimi anahtarlarını kullanarak 100'den fazla kuantum laboratuvarı bulmacasını çözün.",
                 g6Desc: "Yıldızlararası filonuzu yükseltin, plazma kalkanlarınızı kuşanın ve galaktik istilacıların dev ana gemilerine karşı uzay cephesini savunun.",
                 techTitle: "⚡ Stüdyo Teknolojimiz ve Yaklaşımımız",
-                techSub: "Oyuncu dostu tasarım, yüksek kare hızı ve küresel erişilebilirlik standartlarımız."
+                techSub: "Oyuncu dostu tasarım, yüksek kare hızı ve küresel erişilebilirlik standartlarımız.",
+                f1Title: "120 FPS Özel Oyun Motoru",
+                f1Desc: "Hem mobil cihazlarda hem de web tarayıcılarında sıfır gecikmeyle çalışan, donanım hızlandırmalı yüksek performanslı 2D/Canvas mimarisi.",
+                f2Title: "9 Dilde Otomatik Algılama",
+                f2Desc: "Oyuncunun telefon dilini (TR, EN, RU, IT, ES, FR, KO, ZH, JA) otomatik tanıyan akıllı yerelleştirme altyapısı.",
+                f3Title: "Kullanıcı Dostu Deneyim",
+                f3Desc: "Oyuncuyu yarıda kesmeyen, yalnızca ödüllü tercihlere ve dengeli bölüm geçişlerine dayanan oyuncu dostu ekonomi modeli.",
+                f4Title: "Gizlilik ve Güvenlik Önceliği",
+                f4Desc: "Google Play Store ve AdMob politikalarına tam uyumlu, kişisel verileri harici sunucularda toplamayan güvenli yerel kayıt sistemi."
             },
             en: {
                 navFlagship: "Marinext 2100",
@@ -979,11 +1537,13 @@
                 navTech: "Technology",
                 navChangelog: "Changelog",
                 navPrivacy: "Privacy Policy",
-                heroBadge: "🔥 FLAGSHIP RELEASE • PLAY & DOWNLOAD NOW",
-                heroDesc: "Experience a 120 FPS action platformer across 10 cyber & elemental worlds where legendary historical heroes (Sultan Mehmed II, Sultan Selim I, Sultan Suleiman, Ottoman Pasha, Cyber Samurai, Special Forces) battle! Featuring 100 campaign levels and 50 Troll Mode stages.",
+                studioSub: "GAME STUDIO & PUBLISHER",
+                heroBadge: "🔥 FLAGSHIP RELEASE • 150 LEVELS & 14 HEROES",
+                heroDesc: "Experience a 120 FPS action platformer across 10 cyber & elemental worlds where legendary historical heroes (Sultan Mehmed II, Sultan Selim I, Sultan Suleiman the Magnificent, Ottoman Pasha, Cyber Samurai, Special Forces) battle! Featuring 100 campaign levels and 50 Troll Mode stages for a total of 150 stages.",
                 btnPlayInline: "Play Instant Preview",
                 btnPlayFull: "Launch Fullscreen Web",
-                btnSource: "Android & Project Page",
+                btnAlbum: "Screenshots & Album",
+                btnVideo: "Watch Trailer & Video",
                 statGames: "Multi-Genre Game Titles",
                 statLevels: "Handcrafted Stages (Marinext 2100)",
                 statFps: "Ultra-Smooth Engine",
@@ -1004,11 +1564,20 @@
                 g5Desc: "Master wormhole teleporters, laser optics, and gravity switches across 100+ brain-teasing quantum lab puzzles.",
                 g6Desc: "Upgrade your interstellar fleet, equip plasma shields, and defend the galaxy against colossal boss motherships.",
                 techTitle: "⚡ Studio Technology & Philosophy",
-                techSub: "Built on player-first design, ultra-high frame rates, and global accessibility."
+                techSub: "Built on player-first design, ultra-high frame rates, and global accessibility.",
+                f1Title: "120 FPS Proprietary Engine",
+                f1Desc: "Hardware-accelerated 2D Canvas architecture running with zero lag across both mobile devices and desktop browsers.",
+                f2Title: "9 Languages Auto-Detected",
+                f2Desc: "Seamless localization adapting automatically to the player's device language (TR, EN, RU, IT, ES, FR, KO, ZH, JA).",
+                f3Title: "Player-First Experience",
+                f3Desc: "No intrusive interrupts; fair game progression built on optional rewarded videos and balanced checkpoints.",
+                f4Title: "Privacy & Security Assured",
+                f4Desc: "Fully compliant with Google Play Store & AdMob standards. Safe local storage without tracking personal data."
             }
         };
 
         function switchLang(lang) {
+            currentLang = lang;
             const dict = I18N[lang] || I18N.tr;
             document.getElementById('lang-tr').classList.toggle('active', lang === 'tr');
             document.getElementById('lang-en').classList.toggle('active', lang === 'en');
@@ -1016,6 +1585,15 @@
                 const k = el.getAttribute('data-i18n');
                 if (dict[k]) el.textContent = dict[k];
             });
+
+            // Update open album if currently open
+            if (document.getElementById('album-modal').classList.contains('open')) {
+                const album = ALBUMS[activeAlbumKey];
+                if (album) {
+                    document.getElementById('album-title').textContent = '🖼️ ' + (album.title[currentLang] || album.title.tr);
+                    renderAlbumSlide();
+                }
+            }
         }
 
         // Auto-detect browser language on load
