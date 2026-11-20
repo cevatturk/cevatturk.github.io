@@ -4,10 +4,10 @@
   "channels": {
     "production": 25,
     "alpha": 34,
-    "internal": 34
+    "internal": 35
   },
   "storeUrl": "https://play.google.com/store/apps/details?id=com.cgstudiohome.marinext2100",
-  "notes": "v1.3.9 Google Play Console Modernizasyonu & Oyun İçi 9 Dilde Puanlama (In-App Review): Android 15 uçtan uca ekran ve modern cutout uyumu, büyük ekran ve tablet yeniden boyutlandırma desteği, 1. Bölüm sonu aktif dilde doğrudan oyun içi puanlama ve geri bildirim sistemi.",
+  "notes": "v1.3.10 Google Play Modernizasyon Revizyonu: Android 15 Cutout API uyumluluğu, tablet ve katlanabilir ekranlar için dinamik pencere ve yönlendirme optimizasyonları, sıfır gecikmeli 120 FPS akıcılık.",
   "remoteConfig": {
     "ga4MeasurementId": "G-3EVKLV8SM8",
     "ga4ApiSecret": "NpIfsFNeROWOFrpLWGiqMg",
